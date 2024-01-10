@@ -31,6 +31,13 @@ templates_path = ['_templates']
 # -- Options for HTML output
 
 html_theme = 'sphinx_immaterial'  # 'sphinx_rtd_theme'
+html_theme_options = {
+    "palette": { "scheme":  "slate",
+                 "primary": "light-green",
+                 "accent":  "lime" },
+    "font": {"text": "Raleway",
+             "code": "Roboto Mono"}
+}
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
