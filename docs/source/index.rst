@@ -1,9 +1,9 @@
 Welcome to my lightweight readthedocs/sphinx introduction/template!
 ===================================
 
-Documentation projects on `readthedocs.org <https://readthedocs.org>`_ can use various documentation generators, but the most commonly use `Sphinx <https://www.sphinx-doc.org/en/master/index.html>`, which in turn uses the markup language `reStructured Text <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>` for its syntax.
+Documentation projects on `readthedocs.org <https://readthedocs.org>`_ can use various documentation generators, but the most commonly use `Sphinx <https://www.sphinx-doc.org/en/master/index.html>`_, which in turn uses the markup language `reStructured Text <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_ for its syntax.
 
-The source code of the documentation can be found in the `GitHub repository <https://github.com/MelleStarke/EH2023-G09-Project-MLNTMA>`, in the ``./docs/source/`` directory, and take the form of ``.rst`` files. You may choose to either write directly in rst format, or any other format and convert it into rst with `Pandoc <https://pandoc.org/>`.
+The source code of the documentation can be found in the `GitHub repository <https://github.com/MelleStarke/EH2023-G09-Project-MLNTMA>`_, in the ``./docs/source/`` directory, and take the form of ``.rst`` files. You may choose to either write directly in rst format, or any other format and convert it into rst with `Pandoc <https://pandoc.org/>`_.
 
 The navigation bar on the left side automatically copies the contents and depths of the ``./docs/source/`` directory.
 
@@ -24,9 +24,9 @@ We can also have
 
 or
 
-# auto
-# numbered
-# lists
+#. auto
+#. numbered
+#. lists
 
 * Lists can be
 
@@ -35,7 +35,7 @@ or
 * but must have
    * a line break between the levels
 
-For tables I'm not gonna write the whole thing out, but you can find the details over `here <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#tables>`
+For tables I'm not gonna write the whole thing out, but you can find the details over `here <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#tables>`_.
 
 .. note::
 
@@ -53,15 +53,19 @@ With overline, for parts
 
 Main header
 ====
+Placeholder
 
 Sub-header
 ----
+Placeholder
 
 Sub-sub-header
 ^^^^
+Placeholder
 
 Paragraphs
 """"
+Placeholder
 
 Naturally, the main page should feature a table of contents, which can be generated like this:
 
@@ -70,7 +74,7 @@ Naturally, the main page should feature a table of contents, which can be genera
    usage
    api
    sample_page
-      sample_page/sample_sub_page
+   sample_page/sample_sub_page
 
 Although you need to be precise with the location of the pages (with ``./docs/source/`` as the root directory), it will automatically add the different sections in each page to the ToC. The depth of which can be controlled with the ``:maxdepth:`` keyword, like this:
 
