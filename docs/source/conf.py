@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'ML-NTMA'
+copyright = '2024, RUG'
+author = 'Constantinos Kyriakides, Melle Starke, Aditya Menon'
 
 release = '0.1'
 version = '0.1.0'
