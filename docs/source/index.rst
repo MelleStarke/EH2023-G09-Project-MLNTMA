@@ -1,7 +1,7 @@
 Welcome to my lightweight readthedocs/sphinx introduction/template!
 ===================================
 
-Documentation projects on `readthedocs.org <https://readthedocs.org>` can use various documentation generators, but the most commonly use `Sphinx <https://www.sphinx-doc.org/en/master/index.html>`, which in turn uses the markup language `reStructured Text <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>` for its syntax.
+Documentation projects on `readthedocs.org <https://readthedocs.org>`_ can use various documentation generators, but the most commonly use `Sphinx <https://www.sphinx-doc.org/en/master/index.html>`, which in turn uses the markup language `reStructured Text <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>` for its syntax.
 
 The source code of the documentation can be found in the `GitHub repository <https://github.com/MelleStarke/EH2023-G09-Project-MLNTMA>`, in the ``./docs/source/`` directory, and take the form of ``.rst`` files. You may choose to either write directly in rst format, or any other format and convert it into rst with `Pandoc <https://pandoc.org/>`.
 
@@ -12,15 +12,18 @@ You can link to different documents/pages with the ``:doc:`` keyword, e.g. :doc:
 You can also reference to specific sections by adding a label to them, e.g. :ref:`labeled_sub_header`
 
 Naturally, we have some different font formatting options at our disposal:
-* ``*text*`` for *italics*
-* ``**text**`` for **bold**
-* ``\`\`text\`\``` for ``code``
+
+* ``*text*`` for *italics*.
+* ``**text**`` for **bold**.
+* ````text```` for ``code``.
 
 We can also have
+
 1. numbered
 2. lists
 
 or
+
 # auto
 # numbered
 # lists
@@ -40,9 +43,11 @@ For tables I'm not gonna write the whole thing out, but you can find the details
 
 Making different headers/section is quite different than in markdown:
 
+####
 With overline, for chapters
 ####
 
+****
 With overline, for parts
 ****
 
