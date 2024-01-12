@@ -6,4 +6,4 @@ with some basic Sphinx docs.
 
 Read the tutorial here:
 
-https://docs.readthedocs.io/en/stable/tutorial/
+https://rug-eh2023-mlntma.readthedocs.io/en/latest/
