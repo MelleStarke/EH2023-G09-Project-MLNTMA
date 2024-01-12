@@ -35,7 +35,7 @@ html_theme_options = {
     "palette": { "scheme":  "slate",
                  "primary": "light-green",
                  "accent":  "lime" },
-    "font": {"text": "Raleway:wght@500",
+    "font": {"text": "Raleway",
              "code": "Roboto Mono"}
 }
 
