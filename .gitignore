@@ -159,3 +159,5 @@ cython_debug/
 docs/.vscode/
 docs/build/
 docs/source/generated
+rtd_win/
+*/analysis_rnn_bak.ipynb
