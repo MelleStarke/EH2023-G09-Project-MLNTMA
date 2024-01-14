@@ -7,7 +7,7 @@ This page contains info about method 1
 
 
 .. toctree:: 
-    :maxdepth: 4
+    :maxdepth: 2
     :caption: Notebook
 
     ../notebooks/analysis
