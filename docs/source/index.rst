@@ -8,7 +8,7 @@ Welcome. This is a collection of resources that can help one start with using Ma
    :maxdepth: 3
 
    notebooks/analysis3
-   notebooks/analysis_rnn
+   notebooks/analysis_rnn2
    
 
 
