@@ -1,4 +1,3 @@
-.. title:: gen_methods
 
 General Methods Description
 ===========================

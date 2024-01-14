@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'Project Name in conf.py'
+project = 'Network traffic monitoring techinques using Machine Learning'
 copyright = '2024, RUG'
 author = 'Constantinos Kyriakides, Melle Starke, Aditya Menon'
 

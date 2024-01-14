@@ -1,7 +1,7 @@
-.. title:: method1
+
 
 Method 1: Decision Trees, SVM
-=======
+=============================
 
 
 .. toctree:: 
