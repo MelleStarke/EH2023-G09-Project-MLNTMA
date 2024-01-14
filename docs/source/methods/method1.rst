@@ -1,13 +1,13 @@
 .. title:: method1
 
-Method1
+Method 1: Decision Trees, SVM
 =======
-This page contains info about method 1
-
 
 
 .. toctree:: 
     :maxdepth: 2
     :caption: Notebook
 
-    ../notebooks/analysis
+    ../notebooks/analysis3
+
+

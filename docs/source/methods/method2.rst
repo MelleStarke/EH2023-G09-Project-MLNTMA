@@ -1,12 +1,14 @@
 .. title:: method2
 
-Method2
+Method 2: CNN+RNN
 =======
-This page contains info about method 2
-
 
 
 .. toctree:: 
     :maxdepth: 2
+    :caption: Notebook
 
-    
+    ../notebooks/analysis_rnn
+
+
+
