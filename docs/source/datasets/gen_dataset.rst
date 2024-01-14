@@ -1,5 +1,3 @@
-.. title:: gen_dataset
-
 General Dataset Description
 ===========================
 

@@ -1,6 +1,3 @@
-.. title:: dataset2_desc
-
-
 Dataset2 Description
 ====================
 

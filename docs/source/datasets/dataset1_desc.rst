@@ -1,7 +1,4 @@
-.. title:: dataset1_desc
-
-
-Dataset1 Desc
+Dataset1 Description
 ====================
 
 Describe the dataset here
