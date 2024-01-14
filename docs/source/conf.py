@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'ML-NTMA'
+project = 'Project Name in conf.py'
 copyright = '2024, RUG'
 author = 'Constantinos Kyriakides, Melle Starke, Aditya Menon'
 

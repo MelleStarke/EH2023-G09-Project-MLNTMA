@@ -1,15 +1,17 @@
-Welcome to my lightweight readthedocs/sphinx introduction/template!
-===================================
+Project description
+===================
 
-Documentation projects on `readthedocs.org <https://readthedocs.org>`_ can use various documentation generators, but the most commonly use `Sphinx <https://www.sphinx-doc.org/en/master/index.html>`_, which in turn uses the markup language `reStructured Text <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_ for its syntax.
+This page will contain oour project description and outline
 
-The source code of the documentation can be found in the `GitHub repository <https://github.com/MelleStarke/EH2023-G09-Project-MLNTMA>`_, in the ``./docs/source/`` directory, and take the form of ``.rst`` files. You may choose to either write directly in rst format, or any other format and convert it into rst with `Pandoc <https://pandoc.org/>`_.
+.. Documentation projects on `readthedocs.org <https://readthedocs.org>`_ can use various documentation generators, but the most commonly use `Sphinx <https://www.sphinx-doc.org/en/master/index.html>`_, which in turn uses the markup language `reStructured Text <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_ for its syntax.
 
-The navigation bar on the left side automatically copies the contents and depths of the ``./docs/source/`` directory.
+.. The source code of the documentation can be found in the `GitHub repository <https://github.com/MelleStarke/EH2023-G09-Project-MLNTMA>`_, in the ``./docs/source/`` directory, and take the form of ``.rst`` files. You may choose to either write directly in rst format, or any other format and convert it into rst with `Pandoc <https://pandoc.org/>`_.
 
-You can link to different documents/pages with the ``:doc:`` keyword, e.g. :doc:`sample_page/sample_sub_page`.
+.. The navigation bar on the left side automatically copies the contents and depths of the ``./docs/source/`` directory.
 
-You can also reference to specific sections by adding a label to them, e.g. :ref:`labeled_sub_header`
+.. You can link to different documents/pages with the ``:doc:`` keyword, e.g. :doc:`sample_page/sample_sub_page`.
+
+.. You can also reference to specific sections by adding a label to them, e.g. :ref:`labeled_sub_header`
 
 Naturally, we have some different font formatting options at our disposal:
 
@@ -70,20 +72,16 @@ Placeholder
 Naturally, the main page should feature a table of contents, which can be generated like this:
 
 .. toctree::
-
+   :maxdepth: 2
+   
    usage
-   api
-   sample_page
-   sample_page/sample_sub_page
+   old_api_page
+   datasets/gen_dataset
+   methods/gen_methods
+
 
 Although you need to be precise with the location of the pages (with ``./docs/source/`` as the root directory), it will automatically add the different sections in each page to the ToC. The depth of which can be controlled with the ``:maxdepth:`` keyword, like this:
 
-.. toctree::
-   :maxdepth: 1
 
-   usage
-   api
-   sample_page
-      sample_page/sample_sub_page
 
 
