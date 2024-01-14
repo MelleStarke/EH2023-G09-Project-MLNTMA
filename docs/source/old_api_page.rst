@@ -3,3 +3,6 @@ Old API page
 ========================
 
 Just a clean page
+
+.. toctree::
+    :maxdepth: 4

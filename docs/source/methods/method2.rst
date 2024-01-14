@@ -7,5 +7,5 @@ This page contains info about method 2
 
 
 .. toctree:: 
-    :maxdepth: 2
+    :maxdepth: 4
     

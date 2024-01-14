@@ -8,6 +8,6 @@ Describe the dataset here
 
 
 
-.. toctree:: 
-    :maxdepth: 2
+.. toctree::
+    :maxdepth: 4
     

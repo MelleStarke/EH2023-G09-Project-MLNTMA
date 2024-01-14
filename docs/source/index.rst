@@ -72,8 +72,8 @@ Placeholder
 Naturally, the main page should feature a table of contents, which can be generated like this:
 
 .. toctree::
-   :maxdepth: 2
-   
+   :maxdepth: 4
+
    usage
    old_api_page
    datasets/gen_dataset
