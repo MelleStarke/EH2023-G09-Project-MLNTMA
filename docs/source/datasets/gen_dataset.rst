@@ -164,6 +164,17 @@ Caption: Table from Sharafaldin et al. (2017) illustration the identified Intrus
    |  ADFA2013 | YES   | YES     | YES     | YES     | YES     | YES     | NO      | YES     | YES     | YES     | YES     | YES     | YES     | YES     | NO      | YES     | NO      | -       | NO      | YES     | NO     |
    +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------
 
+
+Notes for Constantinos (to myself):
+7 attack vector types
+16 publicly available datasets and 11 distinct criteria based on what (ref)?
+The extensive label set additionally demonstrates the authors' attempt to capture different types of attach without rersorting to simplistic binary classifications such as benign and nnon-benign.
+pages 189-191 might contain useful info but it looks more CS heavy. Can someone look into them?
+
+The original dataset contains with the full feature set evidently contains certain features that might not be as informative for classifying benign and malicious traffic. Naturally some variables will be more indicative of the nature behind a particular traffic flow. Following this rationale, the authors performed a statistical analysis that led to the conclusion that the following features had a higher impact: "flow
+duration, inter-arrival time related features (for flow, forward and backward categories) and idle time related features." These results can be informative for Ethical Hacking researchers planning to collect data for traffic monitoring with a focus on detecting malicious traffic, as the authors point out that the aforementioned variables were indicative of malicious intent.
+Stopped at p.194 (included).
+
  
 
 
