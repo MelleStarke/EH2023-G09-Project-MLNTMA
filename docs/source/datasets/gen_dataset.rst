@@ -126,6 +126,45 @@ Victim: All other clients
 Reference
 ---------------------------
 Iman Sharafaldin, Arash Habibi Lashkari, and Ali A. Ghorbani, “Toward Generating a New Intrusion Detection Dataset and Intrusion Traffic Characterization”, 4th International Conference on Information Systems Security and Privacy (ICISSP), Portugal, January 2018
+
+The CICIDS2017 dataset by Sharafaldin et al. (2017) is comprised of the following vector attacks: DoS, DDoS, brute force, XSS, SQL injection, infiltration, port scan and botnet. Our selected subset contains data from Infiltration attacks. The reason why we selected this specific subset is because of its heavily unbalanced characteristics (with regard to the benign versus malicious traffic), which make it a more realistic and rerpresentative option, as in the literature and real world samples for the benign (majority) class tend to largely outweigh the minority class samples.
+
+Table 1 :ref:`my_table_reference` demonstrates the importance of the CICIDS2017 for the Ethical Hacking research community, as it directly compares it to other existing intrusion detection datasets, clearly revealing where previous datasets are lacking and how the present dataset fits more criteria that are important for studying network attacks.
+
+Caption: Table from Sharafaldin et al. (2017) illustration the identified Intrusion Detection datasets from previous studies compared on a taxonomy with 21 unique characteristics. CICIDS2017 contains all of them, whereas the other datasets do not appear to be as comprehensive according to the authors. The rows denote the relevant dataset and the columns refer to each specific criterion.
+
+.. _my_table_reference:
+
+.. table:: Comparing available IDS datasets based on the dataset evaluation framework [35].
+   :widths: 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15
+
+   +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
+   |  Network Traffic  | Interact. | Captu.  | Protocols | Attack diversity | Ano.    | Heter. | Features | Meta. | HTTP  | HTTPS | SSH  | FTP  | Email | Browser | Bforce | DoS   | Scan  | Bdoor | DNS  | Other |
+   |  Label            |           |         |           |                   |         |        |          |       |      |      |      |      |       |        |        |       |       |      |      |      |
+   +=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+
+   |  DARPA  | YES     | NO      | YES     | YES     | YES     | YES     | NO      | YES     | YES     | NO      | YES     | NO      | YES     | NO      | YES     | NO      | NO      | YES     | NO      | NO      | YES    |
+   +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
+   |  KDD’99 | YES     | NO      | YES     | YES     | YES     | YES     | NO      | YES     | YES     | NO      | YES     | NO      | YES     | NO      | YES     | NO      | NO      | YES     | NO      | NO      | YES    |
+   +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
+   |  DEFCON | NO      | NO      | NO      | YES     | YES     | YES     | NO      | YES     | NO      | NO      | NO      | NO      | YES     | YES     | NO      | YES     | -       | NO      | NO      | NO      | NO     |
+   +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
+   |  CAIDAs | YES     | YES     | NO      | NO      | NO      | -       | -       | -       | -       | -       | NO      | NO      | YES     | YES     | NO      | YES     | YES     | YES     | NO      | NO      | YES    |
+   +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
+   |  LBNL   | YES     | YES     | NO      | NO      | NO      | YES     | NO      | YES     | NO      | YES     | NO      | NO      | -       | -       | YES     | -       | -       | -       | YES     | NO      | NO     |
+   +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
+   |  CDX    | NO      | NO      | NO      | YES     | YES     | YES     | NO      | YES     | YES     | NO      | NO      | YES     | NO      | YES     | YES     | NO      | YES     | -       | NO      | NO      | NO     |
+   +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
+   |  KYOTO  | YES     | NO      | YES     | YES     | YES     | YES     | YES     | YES     | YES     | YES     | YES     | YES     | YES     | YES     | YES     | YES     | YES     | YES     | NO      | NO      | YES    |
+   +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
+   |  TWENTE | YES     | YES     | YES     | YES     | YES     | YES     | NO      | YES     | NO      | YES     | NO      | YES     | NO      | YES     | NO      | NO      | YES     | NO      | YES     | -       | NO     |
+   +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
+   |  UMASS  | YES     | NO      | YES     | NO      | YES     | YES     | NO      | NO      | NO      | NO      | NO      | NO      | NO      | NO      | NO      | NO      | YES     | -       | -       | NO      | NO     |
+   +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
+   |  ISCX2012 | YES   | NO      | YES     | YES     | YES     | YES     | NO      | YES     | YES     | YES     | YES     | YES     | YES     | YES     | YES     | YES     | YES     | YES     | NO      | YES     | NO     |
+   +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
+   |  ADFA2013 | YES   | YES     | YES     | YES     | YES     | YES     | NO      | YES     | YES     | YES     | YES     | YES     | YES     | YES     | NO      | YES     | NO      | -       | NO      | YES     | NO     |
+   +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------
+
  
 
 
