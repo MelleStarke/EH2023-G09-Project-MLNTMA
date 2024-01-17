@@ -139,7 +139,7 @@ Caption: Table from Sharafaldin et al. (2017) illustration the identified Intrus
    :widths: 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15
 
    +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
-   |  Network Traffic Label | Interact. | Captu.  | Protocols | Attack diversity | Ano.    | Heter. | Features | Meta. | HTTP  | HTTPS | SSH  | FTP  | Email | Browser | Bforce | DoS   | Scan  | Bdoor | DNS  | Other |
+   |  Network | Traffic | Label | Interact. | Captu. |  HTTP  | HTTPS | SSH  | FTP  | Email | Browser | Bforce | DoS   | Scan  | Bdoor | DNS  | Other | Ano.    | Heter. | Features | Meta. |
    +=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+
    |  DARPA  | YES     | NO      | YES     | YES     | YES     | YES     | NO      | YES     | YES     | NO      | YES     | NO      | YES     | NO      | YES     | NO      | NO      | YES     | NO      | NO      | YES    |
    +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
