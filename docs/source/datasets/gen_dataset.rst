@@ -21,13 +21,24 @@ this toc creates new sub pages.
    \(Not necessarily in this order:\)
 
    * Analysis of CIC-IDS2017
-      
-      * Description of how it was made/collected \(e.g. NMAP\)
+      * Description of how it was made/collected
+         * Contains most up-to-date common attacks (as of 2017)
+         * Generated PCAPs
+         * Uses `CICFlowMeter <https://github.com/ahlashkari/CICFlowMeter>` to generate the CSVs
+         * Authors link to a `feature description page <http://ww1.netflowmeter.ca/netflowmeter.html?usid=16&utid=30620052538>`, though gives an empty page
+         * Generated realistic background traffic
+            * Authors used their own proposed B-Profile system (Sharafaldin, et al. 2016)
+            * Built abstract behaviour of 25 users based on the HTTP, HTTPS, FTP, SSH, and email protocols.
       * Related work
       * How it relates to Ethical Hacking \(more line a general requirement of this section\)
       * Description of PCAP and relation to extracted features in the csv \(lower priority than the rest\)
 
    Feel free to add to this.
+
+**Description of different recorded days**:
+
+   The data capturing period started at 9 a.m., Monday, July 3, 2017 and ended at 5 p.m. on Friday July 7, 2017, for a total of 5 days. Monday is the normal day and only includes the benign traffic. The implemented attacks include Brute Force FTP, Brute Force SSH, DoS, Heartbleed, Web Attack, Infiltration, Botnet and DDoS. They have been executed both morning and afternoon on Tuesday, Wednesday, Thursday and Friday.
+
 
 General Information 
 ---------------------------
