@@ -102,46 +102,39 @@ The CICIDS2017 dataset by Sharafaldin et al. (2017) is comprised of the followin
 
 Table 1 :ref:`my_table_reference` demonstrates the importance of the CICIDS2017 for the Ethical Hacking research community, as it directly compares it to other existing intrusion detection datasets, clearly revealing where previous datasets are lacking and how the present dataset fits more criteria that are important for studying network attacks.
 
-Caption: Table from Sharafaldin et al. (2017) illustration the identified Intrusion Detection datasets from previous studies compared on a taxonomy with 21 unique characteristics. CICIDS2017 contains all of them, whereas the other datasets do not appear to be as comprehensive according to the authors.
+Caption: Table from Sharafaldin et al. (2017) illustration the identified Intrusion Detection datasets from previous studies compared on a taxonomy with 21 unique characteristics. CICIDS2017 contains all of them, whereas the other datasets do not appear to be as comprehensive according to the authors. The rows denote the relevant dataset and the columns refer to each specific criterion.
 
 .. _my_table_reference:
 
-.. table:: Table Caption
+.. table:: Comparing available IDS datasets based on the dataset evaluation framework [35].
    :widths: 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15
 
-=====  =====  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======
-HTTP   HTTPS  SSH      FTP      Email   Browser  Bforce  DoS     Scan    Bdoor   DNS     Other
-=====  =====  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======
-NO     YES    YES      YES      YES     YES      NO      YES     YES     NO      YES     NO      YES     YES     NO      NO      YES     NO      NO      YES
-NO     YES    YES      YES      YES     YES      NO      YES     YES     NO      YES     NO      YES     YES     NO      NO      YES     NO      NO      YES
-NO     YES    NO       NO       YES     NO       NO      NO      YES     NO      YES     NO      NO      YES     NO      NO      YES     YES     NO      YES
-NO     YES    YES      YES      YES     YES      YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     NO      YES     YES     YES
-YES    YES    YES      YES      YES     YES      YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     NO      YES
-YES    YES    NO       NO       YES     NO       NO      NO      NO      NO      NO      NO      YES     NO      NO      NO      NO      YES     NO      NO
-NO     YES    YES      YES      YES     YES      NO      YES     YES     YES     NO      YES     YES     YES     YES     NO      NO      YES     NO      NO
-YES    YES    YES      YES      YES     YES      NO      YES     YES     NO      YES     NO      YES     YES     NO      YES     NO      YES     NO      YES
-YES    YES    YES      YES      YES     YES      YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES
-NO     YES    NO       YES      YES     NO       NO      NO      YES     NO      NO      NO      NO      NO      NO      NO      NO      YES     NO      NO
-YES    YES    YES      YES      YES     YES      NO      YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES
-YES    YES    YES      YES      YES     YES      NO      YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES
-YES    YES    YES      YES      YES     YES      YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES
-YES    YES    YES      YES      YES     YES      YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES
-YES    YES    YES      YES      YES     YES      YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES
-YES    YES    YES      YES      YES     YES      YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES
-YES    YES    YES      YES      YES     YES      YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES
-YES    YES    YES      YES      YES     YES      YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES
-YES    YES    YES      YES      YES     YES      YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES
-YES    YES    YES      YES      YES     YES      YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES
-YES    YES    YES      YES      YES     YES      YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES
-YES    YES    YES      YES      YES     YES      YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES
-YES    YES    YES      YES      YES     YES      YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES
-YES    YES    YES      YES      YES     YES      YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES
-YES    YES    YES      YES      YES     YES      YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES
-YES    YES    YES      YES      YES     YES      YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES
-YES    YES    YES      YES      YES     YES      YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES
-YES    YES    YES      YES      YES     YES      YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES
-YES    YES    YES      YES      YES     YES      YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES     YES
-=====  =====  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======  =======
+   +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
+   |  Network Traffic  | Interact. | Captu.  | Protocols | Attack diversity | Ano.    | Heter. | Features | Meta. | HTTP  | HTTPS | SSH  | FTP  | Email | Browser | Bforce | DoS   | Scan  | Bdoor | DNS  | Other |
+   |  Label            |           |         |           |                   |         |        |          |       |      |      |      |      |       |        |        |       |       |      |      |      |
+   +=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+=========+
+   |  DARPA  | YES     | NO      | YES     | YES     | YES     | YES     | NO      | YES     | YES     | NO      | YES     | NO      | YES     | NO      | YES     | NO      | NO      | YES     | NO      | NO      | YES    |
+   +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
+   |  KDD’99 | YES     | NO      | YES     | YES     | YES     | YES     | NO      | YES     | YES     | NO      | YES     | NO      | YES     | NO      | YES     | NO      | NO      | YES     | NO      | NO      | YES    |
+   +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
+   |  DEFCON | NO      | NO      | NO      | YES     | YES     | YES     | NO      | YES     | NO      | NO      | NO      | NO      | YES     | YES     | NO      | YES     | -       | NO      | NO      | NO      | NO     |
+   +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
+   |  CAIDAs | YES     | YES     | NO      | NO      | NO      | -       | -       | -       | -       | -       | NO      | NO      | YES     | YES     | NO      | YES     | YES     | YES     | NO      | NO      | YES    |
+   +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
+   |  LBNL   | YES     | YES     | NO      | NO      | NO      | YES     | NO      | YES     | NO      | YES     | NO      | NO      | -       | -       | YES     | -       | -       | -       | YES     | NO      | NO     |
+   +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
+   |  CDX    | NO      | NO      | NO      | YES     | YES     | YES     | NO      | YES     | YES     | NO      | NO      | YES     | NO      | YES     | YES     | NO      | YES     | -       | NO      | NO      | NO     |
+   +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
+   |  KYOTO  | YES     | NO      | YES     | YES     | YES     | YES     | YES     | YES     | YES     | YES     | YES     | YES     | YES     | YES     | YES     | YES     | YES     | YES     | NO      | NO      | YES    |
+   +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
+   |  TWENTE | YES     | YES     | YES     | YES     | YES     | YES     | NO      | YES     | NO      | YES     | NO      | YES     | NO      | YES     | NO      | NO      | YES     | NO      | YES     | -       | NO     |
+   +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
+   |  UMASS  | YES     | NO      | YES     | NO      | YES     | YES     | NO      | NO      | NO      | NO      | NO      | NO      | NO      | NO      | NO      | NO      | YES     | -       | -       | NO      | NO     |
+   +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
+   |  ISCX2012 | YES   | NO      | YES     | YES     | YES     | YES     | NO      | YES     | YES     | YES     | YES     | YES     | YES     | YES     | YES     | YES     | YES     | YES     | NO      | YES     | NO     |
+   +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
+   |  ADFA2013 | YES   | YES     | YES     | YES     | YES     | YES     | NO      | YES     | YES     | YES     | YES     | YES     | YES     | YES     | NO      | YES     | NO      | -       | NO      | YES     | NO     |
+   +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------
 
  
 
