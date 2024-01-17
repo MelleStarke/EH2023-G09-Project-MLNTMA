@@ -20,12 +20,12 @@ this toc creates new sub pages.
 
    \(Not necessarily in this order:\)
 
-   - Analysis of CIC-IDS2017
-   
-     - Description of how it was made/collected \(e.g. NMAP\)
-     - Related work
-     - How it relates to Ethical Hacking \(more line a general requirement of this section\)
-     - Description of PCAP and relation to extracted features in the csv \(lower priority than the rest\)
+   * Analysis of CIC-IDS2017
+      
+      * Description of how it was made/collected \(e.g. NMAP\)
+      * Related work
+      * How it relates to Ethical Hacking \(more line a general requirement of this section\)
+      * Description of PCAP and relation to extracted features in the csv \(lower priority than the rest\)
 
    Feel free to add to this.
  
