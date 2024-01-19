@@ -132,6 +132,7 @@ The CICIDS2017 dataset by Sharafaldin et al. (2017) is comprised of the followin
 Table 1 :ref:`my_table_reference` demonstrates the importance of the CICIDS2017 for the Ethical Hacking research community, as it directly compares it to other existing intrusion detection datasets, clearly revealing where previous datasets are lacking and how the present dataset fits more criteria that are important for studying network attacks.
 
 Caption: Table from Sharafaldin et al. (2017) illustration the identified Intrusion Detection datasets from previous studies compared on a taxonomy with 21 unique characteristics. CICIDS2017 contains all of them, whereas the other datasets do not appear to be as comprehensive according to the authors. The rows denote the relevant dataset and the columns refer to each specific criterion.
+ㅤ
 
 .. _my_table_reference:
 
@@ -139,7 +140,7 @@ Caption: Table from Sharafaldin et al. (2017) illustration the identified Intrus
    :widths: 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15
 
    +--------+---------+---------+---------+-----------+--------+----------+-------+-------+-------+-------+---------+--------+-----+------+-------+-------+-------+-------+-------+-------+--------+
-   |        | Network | Traffic | Label.  | Interact. | Captu. | Protocols| ㅤ    | ㅤ     |  ㅤ   |  ㅤ   | Attack  |   ㅤ    |  ㅤ |  ㅤ  | ㅤ     | ㅤ    |  ㅤ   | Ano.  | Heter.| Feat. | Meta.  |
+   |        | Network | Traffic | Label.  | Interact. | Captu. | Protocols|       |       |       |       | Attack  |        |     |      |       |       |       | Ano.  | Heter.| Feat. | Meta.  |
    |        |         |         |         |           |        | HTTP     | HTTPS | SSH   | FTP   | Email | Browser | Bforce | DoS | Scan | Bdoor | DNS   | Other |       |       |       |        |
    +========+=========+=========+=========+===========+========+==========+=======+=======+=======+=======+=========+========+=====+======+=======+=======+=======+=======+=======+=======+========+
    | DARPA  | ✅      | ❌      | ✅      | ✅        | ✅     | ✅       | ❌    | ✅    | ✅    | ❌    | ✅      | ✅     | ✅  | ❌   | ❌    | ✅    | ❌    | ❌    | ❌    | ✅    | ✅     |
