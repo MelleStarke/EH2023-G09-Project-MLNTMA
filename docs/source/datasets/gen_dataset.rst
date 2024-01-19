@@ -80,7 +80,7 @@ Labelled Flow graphs
 Labels benign (288566) and non-benign (36) → heavily unbalanced
 
 Dataset Relevance for Ethical Hacking
----------------------------
+-------------------------------------
 
 Features
 ---------------------------
@@ -88,7 +88,7 @@ Features
 
 
 Technical information related to selected dataset subset (copied from the official dataset webpage)
----------------------------
+---------------------------------------------------------------------------------------------------
 Infiltration – Dropbox download
 
 Meta exploit Win Vista (14:19 and 14:20-14:21 p.m.) and (14:33 -14:35)
@@ -182,11 +182,13 @@ Caption: Table from Sharafaldin et al. (2017) illustration the identified Intrus
    | - | - |
    +===+===+
 
+
 .. table:: blank character
 
    +----------+---+
    | ‎ | - |
    +==========+===+
+
 
 .. table:: cross
 
@@ -194,11 +196,13 @@ Caption: Table from Sharafaldin et al. (2017) illustration the identified Intrus
    | ✅ | - |
    +====+===+
 
+
 .. table:: check
 
    +----+---+
    | ❌ | - |
    +====+===+
+   
 
 
 
