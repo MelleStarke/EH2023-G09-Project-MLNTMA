@@ -176,6 +176,33 @@ Caption: Table from Sharafaldin et al. (2017) illustration the identified Intrus
    +--------+---------+---------+---------+-----------+--------+----------+-------+-------+-------+-------+---------+--------+-----+------+-------+-------+-------+-------+-------+-------+--------+
 
 
+.. table:: control
+
+   +---+---+
+   | - | - |
+   +===+===+
+
+.. table:: blank character
+
+   +----------+---+
+   | ‎ | - |
+   +==========+===+
+
+.. table:: cross
+
+   +----+---+
+   | ✅ | - |
+   +====+===+
+
+.. table:: check
+
+   +----+---+
+   | ❌ | - |
+   +====+===+
+
+
+
+
 Notes for Constantinos (to myself):
 7 attack vector types
 16 publicly available datasets and 11 distinct criteria based on what (ref)?
