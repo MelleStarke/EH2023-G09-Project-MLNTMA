@@ -187,11 +187,11 @@ Caption: Table from Sharafaldin et al. (2017) illustration the identified Intrus
 
 .. table:: blank character
 
-   +----------+---+
-   | ‎ | - |
-   +==========+===+
-   |     -    | - |
-   +----------+---+
+   +----+---+
+   | ㅤ | - | 
+   +====+===+
+   | -  | - |
+   +----+---+
 
 
 .. table:: cross
