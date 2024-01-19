@@ -137,7 +137,7 @@ Caption: Table from Sharafaldin et al. (2017) illustration the identified Intrus
 .. _my_table_reference:
 
 .. table:: Comparing available IDS datasets based on the dataset evaluation framework [35].
-   :widths: 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+   .. tabularcolumns:: |p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|
 
    +--------+---------+---------+---------+-----------+--------+----------+-------+-------+-------+-------+---------+--------+------+------+-------+-------+-------+-------+-------+-------+--------+
    |        | Network | Traffic | Label.  | Interact. | Captu. | Protocols|       |       |        |      | Attack  |        |      |      |       |       |       | Ano.  | Heter.| Feat. | Meta.  |
