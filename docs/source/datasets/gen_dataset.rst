@@ -245,7 +245,7 @@ TODO
 
 
 
-Compairision to other datasets
+Comparison to other datasets
 ------------------------------
 
 The CICIDS2017 dataset by Sharafaldin et al. (2017) is comprised of the following vector attacks: DoS, DDoS, brute force, XSS, SQL injection, infiltration, port scan and botnet. Our selected subset contains data from Infiltration attacks. The reason why we selected this specific subset is because of its heavily unbalanced characteristics (with regard to the benign versus malicious traffic), which make it a more realistic and rerpresentative option, as in the literature and real world samples for the benign (majority) class tend to largely outweigh the minority class samples.
@@ -301,7 +301,7 @@ Caption: Table from Sharafaldin et al. (2017) illustration the identified Intrus
 
 Reference
 ---------------------------
-Iman Sharafaldin, Arash Habibi Lashkari, and Ali A. Ghorbani, “Toward Generating a New Intrusion Detection Dataset and Intrusion Traffic Characterization”, 4th International Conference on Information Systems Security and Privacy (ICISSP), Portugal, January 2018
+Iman Sharafaldin, Arash Habibi Lashkari, and Ali A. Ghorbani, **“Toward Generating a New Intrusion Detection Dataset and Intrusion Traffic Characterization”**, *4th International Conference on Information Systems Security and Privacy (ICISSP), Portugal*, January 2018
 
 
 .. Notes for Constantinos (to myself):

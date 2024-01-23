@@ -84,17 +84,13 @@ as well as a broad understanding of the available methods through comparative an
 References
 ============================================================
 
-Shahraki, A., Abbasi, M., Taherkordi, A., & Jurcut, A. D. (2022). A comparative study on online
-machine learning techniques for network traffic streams analysis. Computer Networks, 207,
-108836.
-Divakaran, D. M., Su, L., Liau, Y. S., & Thing, V. L. (2015). SLIC: Self-learning intelligent
-classifier for network traffic. Computer Networks, 91, 283-297.
-Wu, K., Edwards, A., Fan, W., Gao, J., & Zhang, K. (2014, April). Classifying imbalanced data
-streams via dynamic feature group weighting with importance sampling. In Proceedings of the
-2014 SIAM international conference on data mining (pp. 722-730). Society for Industrial and
-Applied Mathematics.
-Ditzler, G., & Polikar, R. (2012). Incremental learning of concept drift from streaming imbalanced
-data. IEEE transactions on knowledge and data engineering, 25(10), 2283-2301.
+Shahraki, A., Abbasi, M., Taherkordi, A., & Jurcut, A. D. (2022). **A comparative study on online machine learning techniques for network traffic streams analysis.** *Computer Networks*, 207, 108836.
+
+Divakaran, D. M., Su, L., Liau, Y. S., & Thing, V. L. (2015). **SLIC: Self-learning intelligent classifier for network traffic.** *Computer Networks,* 91, 283-297. 
+
+Wu, K., Edwards, A., Fan, W., Gao, J., & Zhang, K. (2014, April). **Classifying imbalanced data streams via dynamic feature group weighting with importance sampling.** In Proceedings of the 2014 SIAM international conference on data mining (pp. 722-730). *Society for Industrial and Applied Mathematics.*
+
+Ditzler, G., & Polikar, R. (2012). **Incremental learning of concept drift from streaming imbalanced data.** *IEEE transactions on knowledge and data engineering*, 25(10), 2283-2301.
 
 
    
