@@ -35,49 +35,49 @@ CIC-IDS2017 - Intrusion Detection Dataset
 
    Feel free to add to this.
 
-**Description of different recorded days**:
+.. **Description of different recorded days**:
 
-   The data capturing period started at 9 a.m., Monday, July 3, 2017 and ended at 5 p.m. on Friday July 7, 2017, for a total of 5 days. Monday is the normal day and only includes the benign traffic. The implemented attacks include Brute Force FTP, Brute Force SSH, DoS, Heartbleed, Web Attack, Infiltration, Botnet and DDoS. They have been executed both morning and afternoon on Tuesday, Wednesday, Thursday and Friday.
-
-
-**Authors previously outlined 11 critera for building a reliable benchmark dataset:**
-
-   In our recent dataset evaluation framework (Gharib et al., 2016), we have identified eleven criteria that are necessary for building a reliable benchmark dataset. None of the previous IDS datasets could cover all of the 11 criteria. In the following, we briefly outline these criteria:
-
-   Complete Network configuration: A complete network topology includes Modem, Firewall, Switches, Routers, and presence of a variety of operating systems such as Windows, Ubuntu and Mac OS X.
-
-   Complete Traffic: By having a user profiling agent and 12 different machines in Victim-Network and real attacks from the Attack-Network.
-
-   Labelled Dataset: Section 4 and Table 2 show the benign and attack labels for each day. Also, the details of the attack timing will be published on the dataset document.
-
-   Complete Interaction: As Figure 1 shows, we covered both within and between internal LAN by having two different networks and Internet communication as well.
-
-   Complete Capture: Because we used the mirror port, such as tapping system, all traffics have been captured and recorded on the storage server.
-
-   Available Protocols: Provided the presence of all common available protocols, such as HTTP, HTTPS, FTP, SSH and email protocols.
-
-   Attack Diversity: Included the most common attacks based on the 2016 McAfee report, such as Web based, Brute force, DoS, DDoS, Infiltration, Heart-bleed, Bot and Scan covered in this dataset.
-
-   Heterogeneity: Captured the network traffic from the main Switch and memory dump and system calls from all victim machines, during the attacks execution.
-
-   Feature Set: Extracted more than 80 network flow features from the generated network traffic using CICFlowMeter and delivered the network flow dataset as a CSV file. See our PCAP analyzer and CSV generator.
-
-   MetaData: Completely explained the dataset which includes the time, attacks, flows and labels in the published paper.
-
-   The full research paper outlining the details of the dataset and its underlying principles:
-
-    Iman Sharafaldin, Arash Habibi Lashkari, and Ali A. Ghorbani, “Toward Generating a New Intrusion Detection Dataset and Intrusion Traffic Characterization”, 4th International Conference on Information Systems Security and Privacy (ICISSP), Purtogal, January 2018
+..    The data capturing period started at 9 a.m., Monday, July 3, 2017 and ended at 5 p.m. on Friday July 7, 2017, for a total of 5 days. Monday is the normal day and only includes the benign traffic. The implemented attacks include Brute Force FTP, Brute Force SSH, DoS, Heartbleed, Web Attack, Infiltration, Botnet and DDoS. They have been executed both morning and afternoon on Tuesday, Wednesday, Thursday and Friday.
 
 
-General Information 
----------------------------
-CIC - Canadian Institute for Cybersecurity
-IDS - Intrusion Detection System
-Generated PCAP files 
-Labelled Flow graphs
-5 days (9 a.m. - 5 p.m.) → We use Thursday afternoon 
-288602 rows × 79 columns
-Labels benign (288566) and non-benign (36) → heavily unbalanced
+.. **Authors previously outlined 11 critera for building a reliable benchmark dataset:**
+
+..    In our recent dataset evaluation framework (Gharib et al., 2016), we have identified eleven criteria that are necessary for building a reliable benchmark dataset. None of the previous IDS datasets could cover all of the 11 criteria. In the following, we briefly outline these criteria:
+
+..    Complete Network configuration: A complete network topology includes Modem, Firewall, Switches, Routers, and presence of a variety of operating systems such as Windows, Ubuntu and Mac OS X.
+
+..    Complete Traffic: By having a user profiling agent and 12 different machines in Victim-Network and real attacks from the Attack-Network.
+
+..    Labelled Dataset: Section 4 and Table 2 show the benign and attack labels for each day. Also, the details of the attack timing will be published on the dataset document.
+
+..    Complete Interaction: As Figure 1 shows, we covered both within and between internal LAN by having two different networks and Internet communication as well.
+
+..    Complete Capture: Because we used the mirror port, such as tapping system, all traffics have been captured and recorded on the storage server.
+
+..    Available Protocols: Provided the presence of all common available protocols, such as HTTP, HTTPS, FTP, SSH and email protocols.
+
+..    Attack Diversity: Included the most common attacks based on the 2016 McAfee report, such as Web based, Brute force, DoS, DDoS, Infiltration, Heart-bleed, Bot and Scan covered in this dataset.
+
+..    Heterogeneity: Captured the network traffic from the main Switch and memory dump and system calls from all victim machines, during the attacks execution.
+
+..    Feature Set: Extracted more than 80 network flow features from the generated network traffic using CICFlowMeter and delivered the network flow dataset as a CSV file. See our PCAP analyzer and CSV generator.
+
+..    MetaData: Completely explained the dataset which includes the time, attacks, flows and labels in the published paper.
+
+..    The full research paper outlining the details of the dataset and its underlying principles:
+
+..     Iman Sharafaldin, Arash Habibi Lashkari, and Ali A. Ghorbani, “Toward Generating a New Intrusion Detection Dataset and Intrusion Traffic Characterization”, 4th International Conference on Information Systems Security and Privacy (ICISSP), Purtogal, January 2018
+
+
+.. General Information 
+.. ---------------------------
+.. CIC - Canadian Institute for Cybersecurity
+.. IDS - Intrusion Detection System
+.. Generated PCAP files 
+.. Labelled Flow graphs
+.. 5 days (9 a.m. - 5 p.m.) → We use Thursday afternoon 
+.. 288602 rows × 79 columns
+.. Labels benign (288566) and non-benign (36) → heavily unbalanced
 
 
 Background
@@ -163,20 +163,74 @@ We can see that the network consists of a mix of Operating systems and devices s
 The packet data was captured using this port and stored as PCAP files, which is a specialised data format in order to store network activity data for a time period. This format is available as an API exposed by the operating system (libpcap,WinPcap) and can be easily captured using tools such as `tcpdump <https://www.tcpdump.org/>`_ or `Wireshark <https://www.wireshark.org/>`_
 
 
-Attacks and Scenarios
+Attacks and Scenario
 ---------------------
 
+Attacks
+~~~~~~~
 The kind of attacks that were performed while capturing the dataset are described below:
 
 * **Brute Force** - These attacks are used in order to find hidden pages and content on web applications, and for password cracking. These are carried out by using tools such as Hydra, Medusa, Ncrack, hashcat and hashpump for password cracking and Nmap NSE scripts and Metasplot modules are used to probe the victim using 30 different methods such as FPT, SSH, SMTP, Telnet, etc.
   
-* **HeartBleed Attack** - 
-* **Botnet** - 
-* **DoS attack** - 
-* **DDoS attack** - 
-* **Web attacks** - 
-* **Infiltration attacks** - 
+* **HeartBleed Attack** - Heartbleed is an infamous OpenSSL vulnerability that is caused due to malformed implementation of TLS protocol. This has been patched, but software is not always updated so attackers still try these attacks. The authors compile an older version of OpenSSL that is vulnerable to this attack.
+  
+* **Botnet** - The ARES python based botnet was used, and 5 PCs were infected in the victim network to emulate an attack of a botnet.
+  
+* **DoS attack** - Hulk, GoldenEye, slowloris and Slowhttptest are used in order to simulate a DoS attack on victim server, attacking the Apache webserver serving web application
+  
+* **DDoS attack** - Low Orbit Ion Canon (LOIC) is a network stress testing tool to simulate DDoS attacks. It is used along with portscanning using all available main Nmap switches in order to flood the victim with UDP, TCP and HTTP requests.
+  
+* **Web attacks** - the Damn Vulnerable Web App, which is a PHP/MySQL based webapp is served from a server to simulate the victim. This is the web application used for testing in all scenarios. This is also subjected to XSS attacks using automated Selenium scripts.
+  
+* **Infiltration attacks** - TODO
 
+
+The different kinds of attacks are mixed, and across a 5 day period - Monday to Friday, from 9 a.m. to 5 p.m. these attacks were simulated on the described network configuration. The complete dataset consists of multiple files, separated according to the day the data was collected. 
+
+For our experiments, we specifically chose the **Thursday afternoon** subset. We describe the kind of attacks the network experiences that day below. This specific subset was chosen as this contains a major class imbalance in terms of the Benign and Attack labels in the dataset. We feel this is representative of real world scenarios, whereas the other subsets were more balanced. It also allows us to showcase various data augmentation techinques discussed in the literature.
+
+Victim
+~~~~~~
+TODO
+.. Describe user profile
+
+Scenario
+~~~~~~~~
+TODO
+.. Describe scenario
+
+.. Infiltration – Dropbox download
+
+.. Meta exploit Win Vista (14:19 and 14:20-14:21 p.m.) and (14:33 -14:35)
+
+.. Attacker: Kali, 205.174.165.73
+
+.. Victim: Windows Vista, 192.168.10.8
+
+
+.. Infiltration – Cool disk – MAC (14:53 p.m. – 15:00 p.m.)
+
+.. Attacker: Kali, 205.174.165.73
+
+.. Victim: MAC, 192.168.10.25
+
+
+.. Infiltration – Dropbox download
+
+.. Win Vista (15:04 – 15:45 p.m.)
+
+.. First Step:
+
+.. Attacker: Kali, 205.174.165.73
+
+.. Victim: Windows Vista, 192.168.10.8
+
+
+.. Second Step (Portscan + Nmap):
+
+.. Attacker:Vista, 192.168.10.8
+
+.. Victim: All other clients
 
 .. Dataset Relevance for Ethical Hacking
 .. -------------------------------------
@@ -186,45 +240,13 @@ The kind of attacks that were performed while capturing the dataset are describe
 .. "Destination Port", "Flow Duration", "Total Fwd Packets", "Total Backward Packets", "Total Length of Fwd Packets", "Total Length of Bwd Packets", "Fwd Packet Length Max", "Fwd Packet Length Min", "Fwd Packet Length Mean", "Fwd Packet Length Std", "Bwd Packet Length Max", "Bwd Packet Length Min", "Bwd Packet Length Mean", "Bwd Packet Length Std", "Flow Bytes/s", "Flow Packets/s", "Flow IAT Mean", "Flow IAT Std", "Flow IAT Max", "Flow IAT Min", "Fwd IAT Total", "Fwd IAT Mean", "Fwd IAT Std", "Fwd IAT Max", "Fwd IAT Min", "Bwd IAT Total", "Bwd IAT Mean", "Bwd IAT Std", "Bwd IAT Max", "Bwd IAT Min", "Fwd PSH Flags", "Bwd PSH Flags", "Fwd URG Flags", "Bwd URG Flags", "Fwd Header Length", "Bwd Header Length", "Fwd Packets/s", "Bwd Packets/s", "Min Packet Length", "Max Packet Length", "Packet Length Mean", "Packet Length Std", "Packet Length Variance", "FIN Flag Count", "SYN Flag Count", "RST Flag Count", "PSH Flag Count", "ACK Flag Count", "URG Flag Count", "CWE Flag Count", "ECE Flag Count", "Down/Up Ratio", "Average Packet Size", "Avg Fwd Segment Size", "Avg Bwd Segment Size", "Fwd Header Length", "Fwd Avg Bytes/Bulk", "Fwd Avg Packets/Bulk", "Fwd Avg Bulk Rate", "Bwd Avg Bytes/Bulk", "Bwd Avg Packets/Bulk", "Bwd Avg Bulk Rate", "Subflow Fwd Packets", "Subflow Fwd Bytes", "Subflow Bwd Packets", "Subflow Bwd Bytes", "Init_Win_bytes_forward", "Init_Win_bytes_backward", "act_data_pkt_fwd", "min_seg_size_forward", "Active Mean", "Active Std", "Active Max", "Active Min", "Idle Mean", "Idle Std", "Idle Max", "Idle Min", "Label"
 
 
-Technical information related to selected dataset subset (copied from the official dataset webpage)
----------------------------------------------------------------------------------------------------
-Infiltration – Dropbox download
-
-Meta exploit Win Vista (14:19 and 14:20-14:21 p.m.) and (14:33 -14:35)
-
-Attacker: Kali, 205.174.165.73
-
-Victim: Windows Vista, 192.168.10.8
+.. Technical information related to selected dataset subset (copied from the official dataset webpage)
+.. ---------------------------------------------------------------------------------------------------
 
 
-Infiltration – Cool disk – MAC (14:53 p.m. – 15:00 p.m.)
 
-Attacker: Kali, 205.174.165.73
-
-Victim: MAC, 192.168.10.25
-
-
-Infiltration – Dropbox download
-
-Win Vista (15:04 – 15:45 p.m.)
-
-First Step:
-
-Attacker: Kali, 205.174.165.73
-
-Victim: Windows Vista, 192.168.10.8
-
-
-Second Step (Portscan + Nmap):
-
-Attacker:Vista, 192.168.10.8
-
-Victim: All other clients
-
-
-Reference
----------------------------
-Iman Sharafaldin, Arash Habibi Lashkari, and Ali A. Ghorbani, “Toward Generating a New Intrusion Detection Dataset and Intrusion Traffic Characterization”, 4th International Conference on Information Systems Security and Privacy (ICISSP), Portugal, January 2018
+Compairision to other datasets
+------------------------------
 
 The CICIDS2017 dataset by Sharafaldin et al. (2017) is comprised of the following vector attacks: DoS, DDoS, brute force, XSS, SQL injection, infiltration, port scan and botnet. Our selected subset contains data from Infiltration attacks. The reason why we selected this specific subset is because of its heavily unbalanced characteristics (with regard to the benign versus malicious traffic), which make it a more realistic and rerpresentative option, as in the literature and real world samples for the benign (majority) class tend to largely outweigh the minority class samples.
 
@@ -275,6 +297,11 @@ Caption: Table from Sharafaldin et al. (2017) illustration the identified Intrus
    | CICIDS | ✅      | ✅      | ✅      | ✅        | ✅     | ✅       | ✅    | ✅    | ✅    | ✅    | ✅      | ✅     | ✅   | ✅   | ✅    | ✅    | ✅    | ❌    | ✅    | ✅    | ✅     |
    +--------+---------+---------+---------+-----------+--------+----------+-------+-------+-------+-------+---------+--------+------+------+-------+-------+-------+-------+-------+-------+--------+
 
+
+
+Reference
+---------------------------
+Iman Sharafaldin, Arash Habibi Lashkari, and Ali A. Ghorbani, “Toward Generating a New Intrusion Detection Dataset and Intrusion Traffic Characterization”, 4th International Conference on Information Systems Security and Privacy (ICISSP), Portugal, January 2018
 
 
 .. Notes for Constantinos (to myself):
