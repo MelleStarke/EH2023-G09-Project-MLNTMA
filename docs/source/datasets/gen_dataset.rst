@@ -1,18 +1,18 @@
-General Dataset Description
-===========================
+CIC-IDS2017 - Intrusion Detection Dataset
+=========================================
 
-This page will contain the general dataset description. in case we want to add more dataset, we can add it using this format. 
+.. This page will contain the general dataset description. in case we want to add more dataset, we can add it using this format. 
 
-Here, ````dataset1_desc```` is the title of the page ````dataset1_desc.rst```` and also the filename. We need both to be same to get sphinx to work correctly. 
+.. Here, ````dataset1_desc```` is the title of the page ````dataset1_desc.rst```` and also the filename. We need both to be same to get sphinx to work correctly. 
 
-this toc creates new sub pages.
+.. this toc creates new sub pages.
 
 
-.. toctree::
-   :maxdepth: 2
+.. .. toctree::
+..    :maxdepth: 2
 
-   dataset1_desc
-   dataset2_desc
+..    dataset1_desc
+..    dataset2_desc
 
 
 .. note::
@@ -79,12 +79,73 @@ Labelled Flow graphs
 288602 rows × 79 columns
 Labels benign (288566) and non-benign (36) → heavily unbalanced
 
-Dataset Relevance for Ethical Hacking
--------------------------------------
 
-Features
----------------------------
-"Destination Port", "Flow Duration", "Total Fwd Packets", "Total Backward Packets", "Total Length of Fwd Packets", "Total Length of Bwd Packets", "Fwd Packet Length Max", "Fwd Packet Length Min", "Fwd Packet Length Mean", "Fwd Packet Length Std", "Bwd Packet Length Max", "Bwd Packet Length Min", "Bwd Packet Length Mean", "Bwd Packet Length Std", "Flow Bytes/s", "Flow Packets/s", "Flow IAT Mean", "Flow IAT Std", "Flow IAT Max", "Flow IAT Min", "Fwd IAT Total", "Fwd IAT Mean", "Fwd IAT Std", "Fwd IAT Max", "Fwd IAT Min", "Bwd IAT Total", "Bwd IAT Mean", "Bwd IAT Std", "Bwd IAT Max", "Bwd IAT Min", "Fwd PSH Flags", "Bwd PSH Flags", "Fwd URG Flags", "Bwd URG Flags", "Fwd Header Length", "Bwd Header Length", "Fwd Packets/s", "Bwd Packets/s", "Min Packet Length", "Max Packet Length", "Packet Length Mean", "Packet Length Std", "Packet Length Variance", "FIN Flag Count", "SYN Flag Count", "RST Flag Count", "PSH Flag Count", "ACK Flag Count", "URG Flag Count", "CWE Flag Count", "ECE Flag Count", "Down/Up Ratio", "Average Packet Size", "Avg Fwd Segment Size", "Avg Bwd Segment Size", "Fwd Header Length", "Fwd Avg Bytes/Bulk", "Fwd Avg Packets/Bulk", "Fwd Avg Bulk Rate", "Bwd Avg Bytes/Bulk", "Bwd Avg Packets/Bulk", "Bwd Avg Bulk Rate", "Subflow Fwd Packets", "Subflow Fwd Bytes", "Subflow Bwd Packets", "Subflow Bwd Bytes", "Init_Win_bytes_forward", "Init_Win_bytes_backward", "act_data_pkt_fwd", "min_seg_size_forward", "Active Mean", "Active Std", "Active Max", "Active Min", "Idle Mean", "Idle Std", "Idle Max", "Idle Min", "Label"
+Background
+----------
+Intrusion detection acts as the vital first line of defence for security administrators in order to be notified regarding malicious actors within their network. These systems are meant to notify security administrators possible intrusion into the network, attacks on the network, or malware infections. Having a good intrusion detection system ensures that administrators get notified on time and can take start taking steps towards mitigating and quarantine. The key is to allow the attackers as little time within the private network as possible. In the era of constant cyberattacks on major companies and even governments, the need for a good intrusion detection system becomes critical. 
+
+The need for intrusion detection systems is clear, but in order to study them effectivly, researchers require data. These datasets are required in order to better understand the network trends that present themselves before, during and after an attack in order to build better models for detection. These models need not necessarily be Machine Learning based, they could also be based on firewall rules or other similar existing methods to block network traffic. However, in order to acheive this, we need real world attack data, which represents real user network usage as well as attacker network usage interspersed in. This however, is a hard task to accomplish. When a real world attack on a network occurs and is detected, the priority at the moment is to mitigate the attack. It is not feasible to ask administratorsto set up proper network capture in the moment so it could be later analysed. If someone does have network capturing set up beforehand, it becomes a major privacy concern if that data is to be released to the public without prior filtration and anonymisation techniques. Once the data is anonymised to the required degree, it becomes much less useful for researchers looking to identify patterns in the data. 
+
+In order to bridge this gap and to provide useable data  to researcher that is representative of the real world, with a variety of attacks and benign network traffic, the Canadian Institute for Cybersecurity (CIC) introduces the Intrudion Detection System (IDS) dataset. This dataset is presented to us courtesy of Sharafaldin et al. since 2017. The dataset is available `here <https://www.unb.ca/cic/datasets/ids-2017.html>`_.
+
+When the authors were surveying the literature, they also evaluated previously available public datasets. Below is the list of IDS datasets they considered:
+
+#. DARPA (Lincoln Laboratory 1998-99) https://www.ll.mit.edu/r-d/datasets/1998-darpa-intrusion-detection-evaluation-dataset 
+#. KDD'99 (University of California, Irvine 1998-99) https://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html
+#. DEFCON (The Shmoo Group, 2000-2002) https://seclists.org/ids/2000/Aug/55
+#. CAIDA (Center of Applied Internet Data Analysis 2002-2016) https://www.caida.org/catalog/datasets/about/downloads/
+#. LBNL (Lawrence Berkeley National Laboratory and ICSI 2004-2005) https://tools.netsa.cert.org/silk/referencedata.html#LBNL05
+#. CDX (United States Military Academy 2009) https://www.westpoint.edu/centers-and-research/cyber-research-center/data-sets
+#. Kyoto (Kyoto University 2009) https://www.takakura.com/Kyoto_data/
+#. Twente (University of Twente 2009) https://research.utwente.nl/en/publications/a-labeled-data-set-for-flow-based-intrusion-detection
+#. UMASS (University of Massachusetts 2011)
+#. ISCX2012 (University of New Brunswick 2012) https://www.unb.ca/cic/datasets/ids.html
+#. ADFA (University of New South Wales 2013) https://research.unsw.edu.au/projects/adfa-ids-datasets
+#. ISOT (Intrusion Dataset 2008) https://onlineacademiccommunity.uvic.ca/isot/datasets/
+#. CTU-13 (CTU University 2013) https://www.stratosphereips.org/datasets-ctu13/
+#. SSHCure (University of Twente 2014) https://research.utwente.nl/en/publications/sshcure-a-flow-based-ssh-intrusion-detection-system
+#. UGR'16 (University of Granada 2016) https://nesg.ugr.es/nesg-ugr16/
+
+However, they found these existing datasets to be lacking. Mainly, the authors outlined 11 characteristics that are critical for a comprehensive and valid IDS dataset. These are:
+
+* Complete Traffic
+* Attack Diversity
+* Anonymity
+* Available Protocols
+* Complete Capture
+* Complete Interaction
+* Complete Network Configuration
+* Feature Set
+* Heterogeneity
+* Labelling
+* Metadata
+
+They found the existing datasets to be lacking in some regards, none of them offering all the essential characteristics. Thus, the authors introduce the CIC-IDS-2017 dataset to bridge this gap.
+
+Network Configuration
+---------------------
+
+In order to simulate attacks and normal user traffic. The authors contruct a netowrk of computers and servers that are split conceptually into 2 different networks: Attacker Network and Victim Network. This can be represented as follows:
+
+.. image:: ../images/architecture.png
+   :scale: 50
+
+Attacker Network
+~~~~~~~~~~~~~~~~
+
+
+
+Victim Network
+~~~~~~~~~~~~~~
+
+
+
+.. Dataset Relevance for Ethical Hacking
+.. -------------------------------------
+
+.. Features
+.. ---------------------------
+.. "Destination Port", "Flow Duration", "Total Fwd Packets", "Total Backward Packets", "Total Length of Fwd Packets", "Total Length of Bwd Packets", "Fwd Packet Length Max", "Fwd Packet Length Min", "Fwd Packet Length Mean", "Fwd Packet Length Std", "Bwd Packet Length Max", "Bwd Packet Length Min", "Bwd Packet Length Mean", "Bwd Packet Length Std", "Flow Bytes/s", "Flow Packets/s", "Flow IAT Mean", "Flow IAT Std", "Flow IAT Max", "Flow IAT Min", "Fwd IAT Total", "Fwd IAT Mean", "Fwd IAT Std", "Fwd IAT Max", "Fwd IAT Min", "Bwd IAT Total", "Bwd IAT Mean", "Bwd IAT Std", "Bwd IAT Max", "Bwd IAT Min", "Fwd PSH Flags", "Bwd PSH Flags", "Fwd URG Flags", "Bwd URG Flags", "Fwd Header Length", "Bwd Header Length", "Fwd Packets/s", "Bwd Packets/s", "Min Packet Length", "Max Packet Length", "Packet Length Mean", "Packet Length Std", "Packet Length Variance", "FIN Flag Count", "SYN Flag Count", "RST Flag Count", "PSH Flag Count", "ACK Flag Count", "URG Flag Count", "CWE Flag Count", "ECE Flag Count", "Down/Up Ratio", "Average Packet Size", "Avg Fwd Segment Size", "Avg Bwd Segment Size", "Fwd Header Length", "Fwd Avg Bytes/Bulk", "Fwd Avg Packets/Bulk", "Fwd Avg Bulk Rate", "Bwd Avg Bytes/Bulk", "Bwd Avg Packets/Bulk", "Bwd Avg Bulk Rate", "Subflow Fwd Packets", "Subflow Fwd Bytes", "Subflow Bwd Packets", "Subflow Bwd Bytes", "Init_Win_bytes_forward", "Init_Win_bytes_backward", "act_data_pkt_fwd", "min_seg_size_forward", "Active Mean", "Active Std", "Active Max", "Active Min", "Idle Mean", "Idle Std", "Idle Max", "Idle Min", "Label"
 
 
 Technical information related to selected dataset subset (copied from the official dataset webpage)
@@ -178,20 +239,15 @@ Caption: Table from Sharafaldin et al. (2017) illustration the identified Intrus
 
 
 
-Notes for Constantinos (to myself):
-7 attack vector types
-16 publicly available datasets and 11 distinct criteria based on what (ref)?
-The extensive label set additionally demonstrates the authors' attempt to capture different types of attach without rersorting to simplistic binary classifications such as benign and nnon-benign.
-pages 189-191 might contain useful info but it looks more CS heavy. Can someone look into them?
+.. Notes for Constantinos (to myself):
+.. 7 attack vector types
+.. 16 publicly available datasets and 11 distinct criteria based on what (ref)?
+.. The extensive label set additionally demonstrates the authors' attempt to capture different types of attach without rersorting to simplistic binary classifications such as benign and nnon-benign.
+.. pages 189-191 might contain useful info but it looks more CS heavy. Can someone look into them?
 
-The original dataset contains with the full feature set evidently contains certain features that might not be as informative for classifying benign and malicious traffic. Naturally some variables will be more indicative of the nature behind a particular traffic flow. Following this rationale, the authors performed a statistical analysis that led to the conclusion that the following features had a higher impact: "flow
-duration, inter-arrival time related features (for flow, forward and backward categories) and idle time related features." These results can be informative for Ethical Hacking researchers planning to collect data for traffic monitoring with a focus on detecting malicious traffic, as the authors point out that the aforementioned variables were indicative of malicious intent.
-Stopped at p.194 (included).
+.. The original dataset contains with the full feature set evidently contains certain features that might not be as informative for classifying benign and malicious traffic. Naturally some variables will be more indicative of the nature behind a particular traffic flow. Following this rationale, the authors performed a statistical analysis that led to the conclusion that the following features had a higher impact: "flow
+.. duration, inter-arrival time related features (for flow, forward and backward categories) and idle time related features." These results can be informative for Ethical Hacking researchers planning to collect data for traffic monitoring with a focus on detecting malicious traffic, as the authors point out that the aforementioned variables were indicative of malicious intent.
+.. Stopped at p.194 (included).
 
  
 
-
-sub header 1
--------------
-
-This creates the toc on the right, in case we want to do it like that. however, that requires we use the same source page to add all content, which could get lengthly
