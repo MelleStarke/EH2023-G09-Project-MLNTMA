@@ -90,21 +90,21 @@ In order to bridge this gap and to provide useable data  to researcher that is r
 
 When the authors were surveying the literature, they also evaluated previously available public datasets. Below is the list of IDS datasets they considered:
 
-#. DARPA (Lincoln Laboratory 1998-99) https://www.ll.mit.edu/r-d/datasets/1998-darpa-intrusion-detection-evaluation-dataset 
-#. KDD'99 (University of California, Irvine 1998-99) https://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html
-#. DEFCON (The Shmoo Group, 2000-2002) https://seclists.org/ids/2000/Aug/55
-#. CAIDA (Center of Applied Internet Data Analysis 2002-2016) https://www.caida.org/catalog/datasets/about/downloads/
-#. LBNL (Lawrence Berkeley National Laboratory and ICSI 2004-2005) https://tools.netsa.cert.org/silk/referencedata.html#LBNL05
-#. CDX (United States Military Academy 2009) https://www.westpoint.edu/centers-and-research/cyber-research-center/data-sets
-#. Kyoto (Kyoto University 2009) https://www.takakura.com/Kyoto_data/
-#. Twente (University of Twente 2009) https://research.utwente.nl/en/publications/a-labeled-data-set-for-flow-based-intrusion-detection
+#. `DARPA (Lincoln Laboratory 1998-99) <https://www.ll.mit.edu/r-d/datasets/1998-darpa-intrusion-detection-evaluation-dataset>`_ 
+#. `KDD'99 (University of California, Irvine 1998-99) <https://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html>`_
+#. `DEFCON (The Shmoo Group, 2000-2002) <https://seclists.org/ids/2000/Aug/55>`_
+#. `CAIDA (Center of Applied Internet Data Analysis 2002-2016) <https://www.caida.org/catalog/datasets/about/downloads/>`_
+#. `LBNL (Lawrence Berkeley National Laboratory and ICSI 2004-2005) <https://tools.netsa.cert.org/silk/referencedata.html#LBNL05>`_
+#. `CDX (United States Military Academy 2009) <https://www.westpoint.edu/centers-and-research/cyber-research-center/data-sets>`_
+#. `Kyoto (Kyoto University 2009) <https://www.takakura.com/Kyoto_data/>`_
+#. `Twente (University of Twente 2009) <https://research.utwente.nl/en/publications/_a-labeled-data-set-for-flow-based-intrusion-detection>`_
 #. UMASS (University of Massachusetts 2011)
-#. ISCX2012 (University of New Brunswick 2012) https://www.unb.ca/cic/datasets/ids.html
-#. ADFA (University of New South Wales 2013) https://research.unsw.edu.au/projects/adfa-ids-datasets
-#. ISOT (Intrusion Dataset 2008) https://onlineacademiccommunity.uvic.ca/isot/datasets/
-#. CTU-13 (CTU University 2013) https://www.stratosphereips.org/datasets-ctu13/
-#. SSHCure (University of Twente 2014) https://research.utwente.nl/en/publications/sshcure-a-flow-based-ssh-intrusion-detection-system
-#. UGR'16 (University of Granada 2016) https://nesg.ugr.es/nesg-ugr16/
+#. `ISCX2012 (University of New Brunswick 2012) <https://www.unb.ca/cic/datasets/ids.html>`_
+#. `ADFA (University of New South Wales 2013) <https://research.unsw.edu.au/projects/adfa-ids-datasets>`_
+#. `ISOT (Intrusion Dataset 2008) <https://onlineacademiccommunity.uvic.ca/isot/datasets/>`_
+#. `CTU-13 (CTU University 2013) <https://www.stratosphereips.org/datasets-ctu13/>`_
+#. `SSHCure (University of Twente 2014) <https://research.utwente.nl/en/publications/sshcure-a-flow-based-ssh-intrusion-detection-system>`_
+#. `UGR'16 (University of Granada 2016) <https://nesg.ugr.es/nesg-ugr16/>`_
 
 However, they found these existing datasets to be lacking. Mainly, the authors outlined 11 characteristics that are critical for a comprehensive and valid IDS dataset. These are:
 
@@ -128,16 +128,54 @@ Network Configuration
 In order to simulate attacks and normal user traffic. The authors contruct a netowrk of computers and servers that are split conceptually into 2 different networks: Attacker Network and Victim Network. This can be represented as follows:
 
 .. image:: ../images/architecture.png
-   :scale: 50
 
 Attacker Network
 ~~~~~~~~~~~~~~~~
+The attacker internal network contains the following devices:
 
+* 1 Router
+* 1 Switch
+* 1 Kali based PC
+* 3 Windows 8.1 PCs
 
 
 Victim Network
 ~~~~~~~~~~~~~~
 
+The victim network consists of the following devices and firewall:
+
+* Fortinet firewall
+* 3 Servers (Windows Server 2016, Ubuntu 16)
+* 2 Switches
+* 10 PCs connected via Domain Controller (DC), Active Directory 
+
+The PCs consist of a mix of the major operating systems, which include Ubuntu 14.4, 16.4, Windows 7 Professional, Windows 8.1, Windows Vista, Windows 10 and Macintosh. 
+
+The following image shows the network details described above
+
+.. image:: ../images/network.png
+   :scale: 50
+
+We can see that the network consists of a mix of Operating systems and devices such as switches and routers. It also includes a firewall. This showcases that the dataset is representative of the real world.
+
+**In order to capture the data, a mirror port was created on the Victim network that allowed capturing of complete incoming and outgoing packet data.** 
+
+The packet data was captured using this port and stored as PCAP files, which is a specialised data format in order to store network activity data for a time period. This format is available as an API exposed by the operating system (libpcap,WinPcap) and can be easily captured using tools such as `tcpdump <https://www.tcpdump.org/>`_ or `Wireshark <https://www.wireshark.org/>`_
+
+
+Attacks and Scenarios
+---------------------
+
+The kind of attacks that were performed while capturing the dataset are described below:
+
+* **Brute Force** - These attacks are used in order to find hidden pages and content on web applications, and for password cracking. These are carried out by using tools such as Hydra, Medusa, Ncrack, hashcat and hashpump for password cracking and Nmap NSE scripts and Metasplot modules are used to probe the victim using 30 different methods such as FPT, SSH, SMTP, Telnet, etc.
+  
+* **HeartBleed Attack** - 
+* **Botnet** - 
+* **DoS attack** - 
+* **DDoS attack** - 
+* **Web attacks** - 
+* **Infiltration attacks** - 
 
 
 .. Dataset Relevance for Ethical Hacking
