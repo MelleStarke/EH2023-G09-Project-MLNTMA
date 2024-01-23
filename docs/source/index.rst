@@ -7,8 +7,8 @@ Welcome. This is a collection of resources that can help one start with using Ma
    :maxdepth: 1
 
    datasets/gen_dataset
-   notebooks/analysis3
-   notebooks/analysis_rnn2
+   notebooks/analysis_ml
+   notebooks/analysis_dl
 
 Academic Literature on Traffic Monitoring
 ============================================================
