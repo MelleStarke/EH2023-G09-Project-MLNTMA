@@ -15,25 +15,25 @@ CIC-IDS2017 - Intrusion Detection Dataset
 ..    dataset2_desc
 
 
-.. note::
-   TODO:
+.. .. note::
+..    TODO:
 
-   \(Not necessarily in this order:\)
+..    \(Not necessarily in this order:\)
 
-   * Analysis of CIC-IDS2017
-      * Description of how it was made/collected
-         * Contains most up-to-date common attacks (as of 2017)
-         * Generated PCAPs
-         * Uses `CICFlowMeter <https://github.com/ahlashkari/CICFlowMeter>` to generate the CSVs
-         * Authors link to a `feature description page <http://ww1.netflowmeter.ca/netflowmeter.html?usid=16&utid=30620052538>`, though gives an empty page
-         * Generated realistic background traffic
-            * Authors used their own proposed B-Profile system (Sharafaldin, et al. 2016)
-            * Built abstract behaviour of 25 users based on the HTTP, HTTPS, FTP, SSH, and email protocols.
-      * Related work
-      * How it relates to Ethical Hacking \(more line a general requirement of this section\)
-      * Description of PCAP and relation to extracted features in the csv \(lower priority than the rest\)
+..    * Analysis of CIC-IDS2017
+..       * Description of how it was made/collected
+..          * Contains most up-to-date common attacks (as of 2017)
+..          * Generated PCAPs
+..          * Uses `CICFlowMeter <https://github.com/ahlashkari/CICFlowMeter>` to generate the CSVs
+..          * Authors link to a `feature description page <http://ww1.netflowmeter.ca/netflowmeter.html?usid=16&utid=30620052538>`, though gives an empty page
+..          * Generated realistic background traffic
+..             * Authors used their own proposed B-Profile system (Sharafaldin, et al. 2016)
+..             * Built abstract behaviour of 25 users based on the HTTP, HTTPS, FTP, SSH, and email protocols.
+..       * Related work
+..       * How it relates to Ethical Hacking \(more line a general requirement of this section\)
+..       * Description of PCAP and relation to extracted features in the csv \(lower priority than the rest\)
 
-   Feel free to add to this.
+..    Feel free to add to this.
 
 .. **Description of different recorded days**:
 
@@ -127,7 +127,7 @@ Network Configuration
 
 In order to simulate attacks and normal user traffic. The authors contruct a netowrk of computers and servers that are split conceptually into 2 different networks: Attacker Network and Victim Network. This can be represented as follows:
 
-.. image:: ../images/architecture.png
+.. image:: images/architecture.png
 
 Attacker Network
 ~~~~~~~~~~~~~~~~
@@ -153,7 +153,7 @@ The PCs consist of a mix of the major operating systems, which include Ubuntu 14
 
 The following image shows the network details described above
 
-.. image:: ../images/network.png
+.. image:: images/network.png
    :scale: 50
 
 We can see that the network consists of a mix of Operating systems and devices such as switches and routers. It also includes a firewall. This showcases that the dataset is representative of the real world.
@@ -182,62 +182,72 @@ The kind of attacks that were performed while capturing the dataset are describe
   
 * **Web attacks** - the Damn Vulnerable Web App, which is a PHP/MySQL based webapp is served from a server to simulate the victim. This is the web application used for testing in all scenarios. This is also subjected to XSS attacks using automated Selenium scripts.
   
-* **Infiltration attacks** - TODO
+* **Infiltration attacks** - the authors try to mimic real world infiltration attacks in the form of malicious Dropbox download links for Windows devices, and malicious USB drives for Macintosh devices. They use these methods to get the user to download malicious software, that targets common vulnerable software such as Adobe Acrobat Reader. If the attack is successful, they payload dropped can conduct IP sweeps and port scanning of the internal Victim network via Nmap.
 
+The authors used the above described softwares for the different uses and employed the use of Python scripts in order to automate run the attacks in parallel using multiprocessing. 
 
-The different kinds of attacks are mixed, and across a 5 day period - Monday to Friday, from 9 a.m. to 5 p.m. these attacks were simulated on the described network configuration. The complete dataset consists of multiple files, separated according to the day the data was collected. 
+The different kinds of attacks are mixed, and across a 5 day period - Monday to Friday, from 9 a.m. to 5 p.m. these attacks were simulated on the described network configuration. The complete dataset consists of multiple PCAP files, separated according to the day the data was collected. The authors also provide the data extracted into csv format for easy consumption. 
 
-For our experiments, we specifically chose the **Thursday afternoon** subset. We describe the kind of attacks the network experiences that day below. This specific subset was chosen as this contains a major class imbalance in terms of the Benign and Attack labels in the dataset. We feel this is representative of real world scenarios, whereas the other subsets were more balanced. It also allows us to showcase various data augmentation techinques discussed in the literature.
+For our experiments, we specifically chose the **Thursday afternoon** subset of the csv dataset. We describe the kind of attacks the network experiences that day below. This specific subset was chosen as this contains a major class imbalance in terms of the Benign and Attack labels in the dataset. We feel this is representative of real world scenarios, whereas the other subsets were more balanced. It also allows us to showcase various data augmentation techinques discussed in the literature.
 
-Victim
-~~~~~~
-TODO
+Victims
+~~~~~~~
+
+In order to mimic benign user traffic on the Victim network, the authors used their proposed B-Profile system. This system is capable of profiling user network interactions and generate natural traffic based on learnt profile. In order to generate the data, the authors used a dataset that contained user network traffic of 25 individuals, containing differnt protocols such as SSH, HTTP, SMTP, HTTPS, FTP, etc. The B-Profile system learnt a comprehensive profile based on this normal user traffic, using statistical and machine laerning based methods. This was used to derive a B-Profile that will mimic normal users. Finally, and agent written in Java is used to generate the benign network traffic with similar characteristics. This generated data was used as the basis of all data labelled "Benign" in the final IDS dataset.
+
 .. Describe user profile
 
 Scenario
 ~~~~~~~~
-TODO
+
+As we mentioned earlier, the dataset contains multiple PCAP files for the 5 different days. However, the authors also provide a ``MachineLearningCSV.zip`` file. This contains data extracted into CSV format for easy use in Machine Learning. These files are also plit across the days. Each of these files are also quite sizeable. Fow our experiments, we specifically use ``Thursday-WorkingHours-Afternoon-lnfilteration.pcap_ISCX.csv`` file. As the name suggests, This specifically contains benign data, as well as Infilteration attacks mentioned before. The attack description in this dataset looks as follows:
+
 .. Describe scenario
 
-.. Infiltration – Dropbox download
+* **Infiltration** – Dropbox download attack vector
 
-.. Meta exploit Win Vista (14:19 and 14:20-14:21 p.m.) and (14:33 -14:35)
+   Metasploit module used to exploit Win Vista between (14:19 and 14:20-14:21 p.m.) and (14:33 -14:35)
 
-.. Attacker: Kali, 205.174.165.73
+   Attacker: Kali, 205.174.165.73
 
-.. Victim: Windows Vista, 192.168.10.8
-
-
-.. Infiltration – Cool disk – MAC (14:53 p.m. – 15:00 p.m.)
-
-.. Attacker: Kali, 205.174.165.73
-
-.. Victim: MAC, 192.168.10.25
+   Victim: Windows Vista, 192.168.10.8
 
 
-.. Infiltration – Dropbox download
+* **Infiltration** – USB disk attack vector 
 
-.. Win Vista (15:04 – 15:45 p.m.)
+   Cool Disk utility used to exploit Mac between (14:53 p.m. – 15:00 p.m.)
 
-.. First Step:
+   Attacker: Kali, 205.174.165.73
 
-.. Attacker: Kali, 205.174.165.73
-
-.. Victim: Windows Vista, 192.168.10.8
+   Victim: Mac, 192.168.10.25
 
 
-.. Second Step (Portscan + Nmap):
+* **Infiltration** – Dropbox download attack vector
 
-.. Attacker:Vista, 192.168.10.8
+   Metasploit module used to exploit Win Vista between (15:04 – 15:45 p.m.)
 
-.. Victim: All other clients
+      * First Step:
 
-.. Dataset Relevance for Ethical Hacking
-.. -------------------------------------
+      Attacker: Kali, 205.174.165.73
 
-.. Features
-.. ---------------------------
-.. "Destination Port", "Flow Duration", "Total Fwd Packets", "Total Backward Packets", "Total Length of Fwd Packets", "Total Length of Bwd Packets", "Fwd Packet Length Max", "Fwd Packet Length Min", "Fwd Packet Length Mean", "Fwd Packet Length Std", "Bwd Packet Length Max", "Bwd Packet Length Min", "Bwd Packet Length Mean", "Bwd Packet Length Std", "Flow Bytes/s", "Flow Packets/s", "Flow IAT Mean", "Flow IAT Std", "Flow IAT Max", "Flow IAT Min", "Fwd IAT Total", "Fwd IAT Mean", "Fwd IAT Std", "Fwd IAT Max", "Fwd IAT Min", "Bwd IAT Total", "Bwd IAT Mean", "Bwd IAT Std", "Bwd IAT Max", "Bwd IAT Min", "Fwd PSH Flags", "Bwd PSH Flags", "Fwd URG Flags", "Bwd URG Flags", "Fwd Header Length", "Bwd Header Length", "Fwd Packets/s", "Bwd Packets/s", "Min Packet Length", "Max Packet Length", "Packet Length Mean", "Packet Length Std", "Packet Length Variance", "FIN Flag Count", "SYN Flag Count", "RST Flag Count", "PSH Flag Count", "ACK Flag Count", "URG Flag Count", "CWE Flag Count", "ECE Flag Count", "Down/Up Ratio", "Average Packet Size", "Avg Fwd Segment Size", "Avg Bwd Segment Size", "Fwd Header Length", "Fwd Avg Bytes/Bulk", "Fwd Avg Packets/Bulk", "Fwd Avg Bulk Rate", "Bwd Avg Bytes/Bulk", "Bwd Avg Packets/Bulk", "Bwd Avg Bulk Rate", "Subflow Fwd Packets", "Subflow Fwd Bytes", "Subflow Bwd Packets", "Subflow Bwd Bytes", "Init_Win_bytes_forward", "Init_Win_bytes_backward", "act_data_pkt_fwd", "min_seg_size_forward", "Active Mean", "Active Std", "Active Max", "Active Min", "Idle Mean", "Idle Std", "Idle Max", "Idle Min", "Label"
+      Victim: Windows Vista, 192.168.10.8
+
+
+      * Second Step (Portscan + Nmap):
+
+      Attacker:Vista, 192.168.10.8
+
+      Victim: All other clients
+
+
+
+Features
+--------
+
+In order to extract features from the captured PCAP files, the authors used CICFlowMeter to process the PCAP files and extract the most relevant features for research, such as source IP/port, destination IP/port, etc. 80 such features were extracted, along with their timestamps. This data is then labelled manually by the authors by checking the attack schedule described above and labelling the traffic from the given machines accordingly. 
+
+.. note:: 
+   The complete list of features extracted is as follows: ``"Destination Port", "Flow Duration", "Total Fwd Packets", "Total Backward Packets", "Total Length of Fwd Packets", "Total Length of Bwd Packets", "Fwd Packet Length Max", "Fwd Packet Length Min", "Fwd Packet Length Mean", "Fwd Packet Length Std", "Bwd Packet Length Max", "Bwd Packet Length Min", "Bwd Packet Length Mean", "Bwd Packet Length Std", "Flow Bytes/s", "Flow Packets/s", "Flow IAT Mean", "Flow IAT Std", "Flow IAT Max", "Flow IAT Min", "Fwd IAT Total", "Fwd IAT Mean", "Fwd IAT Std", "Fwd IAT Max", "Fwd IAT Min", "Bwd IAT Total", "Bwd IAT Mean", "Bwd IAT Std", "Bwd IAT Max", "Bwd IAT Min", "Fwd PSH Flags", "Bwd PSH Flags", "Fwd URG Flags", "Bwd URG Flags", "Fwd Header Length", "Bwd Header Length", "Fwd Packets/s", "Bwd Packets/s", "Min Packet Length", "Max Packet Length", "Packet Length Mean", "Packet Length Std", "Packet Length Variance", "FIN Flag Count", "SYN Flag Count", "RST Flag Count", "PSH Flag Count", "ACK Flag Count", "URG Flag Count", "CWE Flag Count", "ECE Flag Count", "Down/Up Ratio", "Average Packet Size", "Avg Fwd Segment Size", "Avg Bwd Segment Size", "Fwd Header Length", "Fwd Avg Bytes/Bulk", "Fwd Avg Packets/Bulk", "Fwd Avg Bulk Rate", "Bwd Avg Bytes/Bulk", "Bwd Avg Packets/Bulk", "Bwd Avg Bulk Rate", "Subflow Fwd Packets", "Subflow Fwd Bytes", "Subflow Bwd Packets", "Subflow Bwd Bytes", "Init_Win_bytes_forward", "Init_Win_bytes_backward", "act_data_pkt_fwd", "min_seg_size_forward", "Active Mean", "Active Std", "Active Max", "Active Min", "Idle Mean", "Idle Std", "Idle Max", "Idle Min", "Label"``
 
 
 .. Technical information related to selected dataset subset (copied from the official dataset webpage)
@@ -248,7 +258,7 @@ TODO
 Comparison to other datasets
 ------------------------------
 
-The CICIDS2017 dataset by Sharafaldin et al. (2017) is comprised of the following vector attacks: DoS, DDoS, brute force, XSS, SQL injection, infiltration, port scan and botnet. Our selected subset contains data from Infiltration attacks. The reason why we selected this specific subset is because of its heavily unbalanced characteristics (with regard to the benign versus malicious traffic), which make it a more realistic and rerpresentative option, as in the literature and real world samples for the benign (majority) class tend to largely outweigh the minority class samples.
+.. The CICIDS2017 dataset by Sharafaldin et al. comprises of the following vector attacks: DoS, DDoS, brute force, XSS, SQL injection, infiltration, port scan and botnet. Our selected subset contains data from Infiltration attacks. The reason why we selected this specific subset is because of its heavily unbalanced characteristics (with regard to the benign versus malicious traffic), which make it a more realistic and rerpresentative option, as in the literature and real world samples for the benign (majority) class tend to largely outweigh the minority class samples.
 
 Table 1 :ref:`my_table_reference` demonstrates the importance of the CICIDS2017 for the Ethical Hacking research community, as it directly compares it to other existing intrusion detection datasets, clearly revealing where previous datasets are lacking and how the present dataset fits more criteria that are important for studying network attacks.
 
@@ -297,6 +307,18 @@ Caption: Table from Sharafaldin et al. (2017) illustration the identified Intrus
    | CICIDS | ✅      | ✅      | ✅      | ✅        | ✅     | ✅       | ✅    | ✅    | ✅    | ✅    | ✅      | ✅     | ✅   | ✅   | ✅    | ✅    | ✅    | ❌    | ✅    | ✅    | ✅     |
    +--------+---------+---------+---------+-----------+--------+----------+-------+-------+-------+-------+---------+--------+------+------+-------+-------+-------+-------+-------+-------+--------+
 
+
+Overall, the presented dataset is the only one that exhibits most of the characteristics the authors deemed fit for building the ideal IDS dataset, compared to other publically available datasets. Specifically, this dataset is the only one that offers:
+
+* **Complete Traffic** - having multiple victim machines based on real user profiles and real attacks
+* **Labelled Dataset** - as described from the attack timings and machines
+* **Complete Interaction** - dataset contains internal and intranet traffic between attackers and victims 
+* **Complete Capture** - all incoming and outgoing data captures through the use of the mirror port on victim network
+* **Available Protocols** - dataset contains all commonly available protocols such as HTTP, HTTPS, FTP, SSH and email protocols.
+* **Attack Diversity** - complete dataset contains a healthy mix of  attacks that are Web based, Brute force, DoS, DDoS, Infiltration, Heart-bleed, Bot and Scan already covered in this dataset. 
+* **Heterogeneity** - the authors capture the network traffic from the main switch and memory dump and system calls from all victim machines during the attacks execution
+* **Feature Set** - is provided by extracting more than 80 network flow features from the generated network traffic and delivering the network flow dataset as a CSV file.
+* **Metadata** - extensive explanation and detail of the dataset is provided.
 
 
 Reference
