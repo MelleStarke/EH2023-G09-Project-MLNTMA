@@ -264,6 +264,8 @@ Table 1 :ref:`my_table_reference` demonstrates the importance of the CICIDS2017 
 
 *Table from Sharafaldin et al. (2017). This table outlines the identified Intrusion Detection datasets from previous studies compared on a taxonomy with 21 unique characteristics. CICIDS2017 contains nearly all characteristics, whereas the other datasets do not appear to be as comprehensive according to the authors. The rows denote the relevant dataset and the columns refer to each specific criterion.*
 
+   *Table from Sharafaldin et al. (2017). This table outlines the identified Intrusion Detection datasets from previous studies compared on a taxonomy with 21 unique characteristics. CICIDS2017 contains nearly all characteristics, whereas the other datasets do not appear to be as comprehensive according to the authors. The rows denote the relevant dataset and the columns refer to each specific criterion.*
+
 .. _my_table_reference:
 
 .. table:: Comparing available IDS datasets based on the dataset evaluation framework. Sharafaldin et al. (2017).
@@ -305,10 +307,6 @@ Table 1 :ref:`my_table_reference` demonstrates the importance of the CICIDS2017 
    +--------+---------+---------+---------+-----------+--------+----------+-------+-------+-------+-------+---------+--------+------+------+-------+-------+-------+-------+-------+-------+--------+
    | CICIDS | ✅      | ✅      | ✅      | ✅        | ✅     | ✅       | ✅    | ✅    | ✅    | ✅    | ✅      | ✅     | ✅   | ✅   | ✅    | ✅    | ✅    | ❌    | ✅    | ✅    | ✅     |
    +--------+---------+---------+---------+-----------+--------+----------+-------+-------+-------+-------+---------+--------+------+------+-------+-------+-------+-------+-------+-------+--------+
-   
- 
-
-   *Table from Sharafaldin et al. (2017). This table outlines the identified Intrusion Detection datasets from previous studies compared on a taxonomy with 21 unique characteristics. CICIDS2017 contains nearly all characteristics, whereas the other datasets do not appear to be as comprehensive according to the authors. The rows denote the relevant dataset and the columns refer to each specific criterion.*
 
 Overall, the presented dataset is the only one that exhibits most of the characteristics the authors deemed fit for building the ideal IDS dataset, compared to other publically available datasets. Specifically, this dataset is the only one that offers:
 
