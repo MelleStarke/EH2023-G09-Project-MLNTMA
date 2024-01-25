@@ -1,4 +1,4 @@
-CIC-IDS2017 - Intrusion Detection Dataset
+CIC-IDS-2017 - Intrusion Detection Dataset
 =========================================
 
 .. This page will contain the general dataset description. in case we want to add more dataset, we can add it using this format. 
@@ -305,6 +305,8 @@ Table 1 :ref:`my_table_reference` demonstrates the importance of the CICIDS2017 
    +--------+---------+---------+---------+-----------+--------+----------+-------+-------+-------+-------+---------+--------+------+------+-------+-------+-------+-------+-------+-------+--------+
    | CICIDS | ✅      | ✅      | ✅      | ✅        | ✅     | ✅       | ✅    | ✅    | ✅    | ✅    | ✅      | ✅     | ✅   | ✅   | ✅    | ✅    | ✅    | ❌    | ✅    | ✅    | ✅     |
    +--------+---------+---------+---------+-----------+--------+----------+-------+-------+-------+-------+---------+--------+------+------+-------+-------+-------+-------+-------+-------+--------+
+   
+ 
 
    *Table from Sharafaldin et al. (2017). This table outlines the identified Intrusion Detection datasets from previous studies compared on a taxonomy with 21 unique characteristics. CICIDS2017 contains nearly all characteristics, whereas the other datasets do not appear to be as comprehensive according to the authors. The rows denote the relevant dataset and the columns refer to each specific criterion.*
 

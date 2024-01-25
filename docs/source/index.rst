@@ -1,4 +1,4 @@
-Network traffic monitoring techinques using Machine Learning
+Network Traffic Analysis Techinques using Machine Learning
 ============================================================
 
 Welcome to our tutorial on Machine Learning-based Network Traffic Analysis. This is a collection of resources that can help one start with using Machine Learning in the field of Network Traffic Analysis. We hope that people find this resource useful. We provide explanations and code of some of the popular ML and DL algorithms in order to provide readers with inspiration on how to use such models in our domain. The documentation is layed out as follows:
@@ -28,7 +28,6 @@ some preliminary research on machine learning practices in classifying network t
 
 Academic Literature on Traffic Monitoring
 ============================================================
-
 AI is currently being used for different tasks within the domain of Cybersecurity. One such
 domain is Online machine learning (OL) and is concerned with the employment of traditional
 machine learning algorithms for classifying network traffic (Shahraki, 2022). Such methods are
@@ -80,7 +79,6 @@ as well as a broad understanding of the available methods through comparative an
 
 References
 ============================================================
-
 Shahraki, A., Abbasi, M., Taherkordi, A., & Jurcut, A. D. (2022). **A comparative study on online machine learning techniques for network traffic streams analysis.** *Computer Networks*, 207, 108836.
 
 Divakaran, D. M., Su, L., Liau, Y. S., & Thing, V. L. (2015). **SLIC: Self-learning intelligent classifier for network traffic.** *Computer Networks,* 91, 283-297. 
