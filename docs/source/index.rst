@@ -1,7 +1,7 @@
 Network traffic monitoring techinques using Machine Learning
 ============================================================
 
-Welcome. This is a collection of resources that can help one start with using Machine Learning in the field of Network Traffic Analysis. We hope that people find this resource useful. We provide explanations and code of some of the popular ML and DL algorithms in order to provide readers with inspiration on how to use such models in our domain. The documentation is layed out as follows:
+Welcome to our tutorial on Machine Learning-based Network Traffic Analysis. This is a collection of resources that can help one start with using Machine Learning in the field of Network Traffic Analysis. We hope that people find this resource useful. We provide explanations and code of some of the popular ML and DL algorithms in order to provide readers with inspiration on how to use such models in our domain. The documentation is layed out as follows:
 
 .. toctree::
    :maxdepth: 1
@@ -9,9 +9,6 @@ Welcome. This is a collection of resources that can help one start with using Ma
    datasets/dataset
    notebooks/analysis_ml
    notebooks/analysis_dl
-
-Academic Literature on Traffic Monitoring
-============================================================
 
 In recent years AI and ML have exploded in terms of their popularity, effectiveness and
 applicability. Despite cyber-security being increasingly more important in modern days’ digitized
@@ -24,10 +21,13 @@ manner.
 For our final project we are going to develop a practical review and guide of current practices in
 detecting suspicious network traffic using machine learning. The nature of our work will thus be
 education-based, with the aim of providing two perspectives on understanding network traffic in
-a documentation-style format: the first component is to provide an overview of the academic
+a documentation-style format: the first component is to provide a glimpse into the academic
 literature and the second component is to provide practical examples in our blog with code
-demonstrating how different algorithms are used to classify malicious traffic.Below we provide
+demonstrating how different algorithms are used to classify malicious traffic. Below we provide
 some preliminary research on machine learning practices in classifying network traffic.
+
+Academic Literature on Traffic Monitoring
+============================================================
 
 AI is currently being used for different tasks within the domain of Cybersecurity. One such
 domain is Online machine learning (OL) and is concerned with the employment of traditional
@@ -70,10 +70,7 @@ and the Learn++.NIE algorithm that introduces penalties for incorrectly classifi
 a weighting system (Ditzler & Polikar, 2012).
 
 Our aim is to provide our peers with a resource that structures and highlights the
-relatively underdeveloped field of ML-based NTMA. We aim to identify, categorize, and evaluate
-the range of machine learning algorithms that have been applied in this field. Our focus includes
-an assessment of the effectiveness, accuracy, and practicality of these algorithms in real-world
-scenarios. Our focus includes an assessment of the effectiveness, accuracy, and practicality of
+relatively underdeveloped field of ML-based NTMA. We aim to illustrate and evaluate some elementary machine learning algorithms that have also been applied to this field. Our focus includes an assessment of the effectiveness, accuracy, and practicality of
 these algorithms in real-world scenarios.
 We aim to structure this information in an accessible and easily digestible format, by structuring
 it similarly to code documentation, which our users will be very familiar with. Furthermore,

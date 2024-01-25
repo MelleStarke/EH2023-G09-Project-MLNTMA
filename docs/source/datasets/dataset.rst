@@ -84,7 +84,7 @@ Background
 ----------
 Intrusion detection acts as the vital first line of defence for security administrators in order to be notified regarding malicious actors within their network. These systems are meant to notify security administrators possible intrusion into the network, attacks on the network, or malware infections. Having a good intrusion detection system ensures that administrators get notified on time and can take start taking steps towards mitigating and quarantine. The key is to allow the attackers as little time within the private network as possible. In the era of constant cyberattacks on major companies and even governments, the need for a good intrusion detection system becomes critical. 
 
-The need for intrusion detection systems is clear, but in order to study them effectivly, researchers require data. These datasets are required in order to better understand the network trends that present themselves before, during and after an attack in order to build better models for detection. These models need not necessarily be Machine Learning based, they could also be based on firewall rules or other similar existing methods to block network traffic. However, in order to acheive this, we need real world attack data, which represents real user network usage as well as attacker network usage interspersed in. This however, is a hard task to accomplish. When a real world attack on a network occurs and is detected, the priority at the moment is to mitigate the attack. It is not feasible to ask administratorsto set up proper network capture in the moment so it could be later analysed. If someone does have network capturing set up beforehand, it becomes a major privacy concern if that data is to be released to the public without prior filtration and anonymisation techniques. Once the data is anonymised to the required degree, it becomes much less useful for researchers looking to identify patterns in the data. 
+The need for intrusion detection systems is clear, but in order to study them effectively, researchers require data. These datasets are required in order to better understand the network trends that present themselves before, during and after an attack in order to build better models for detection. These models need not necessarily be Machine Learning based, they could also be based on firewall rules or other similar existing methods to block network traffic. However, in order to acheive this, we need real world attack data, which includes both user and attacker network behaviour. This however, is a hard task to accomplish. When a real world attack on a network occurs and is detected, the priority at the moment is to mitigate the attack. It is not feasible to ask administratorsto set up proper network capture in the moment so it could be later analysed. If someone does have network capturing set up beforehand, it becomes a major privacy concern if that data is to be released to the public without prior filtration and anonymisation techniques. Once the data is anonymised to the required degree, it becomes much less useful for researchers looking to identify patterns in the data. 
 
 In order to bridge this gap and to provide useable data  to researcher that is representative of the real world, with a variety of attacks and benign network traffic, the Canadian Institute for Cybersecurity (CIC) introduces the Intrudion Detection System (IDS) dataset. This dataset is presented to us courtesy of Sharafaldin et al. since 2017. The dataset is available `here <https://www.unb.ca/cic/datasets/ids-2017.html>`_.
 
@@ -160,7 +160,7 @@ We can see that the network consists of a mix of Operating systems and devices s
 
 **In order to capture the data, a mirror port was created on the Victim network that allowed capturing of complete incoming and outgoing packet data.** 
 
-The packet data was captured using this port and stored as PCAP files, which is a specialised data format in order to store network activity data for a time period. This format is available as an API exposed by the operating system (libpcap,WinPcap) and can be easily captured using tools such as `tcpdump <https://www.tcpdump.org/>`_ or `Wireshark <https://www.wireshark.org/>`_
+The packet data was captured using this port and stored as PCAP files, which is a specialised data format in order to store network activity data for a time period. This format is available as an API exposed by the operating system (libpcap,WinPcap) and can be easily captured using tools such as `tcpdump <https://www.tcpdump.org/>`_ or `Wireshark <https://www.wireshark.org/>`_.
 
 
 Attacks and Scenario
@@ -184,7 +184,7 @@ The kind of attacks that were performed while capturing the dataset are describe
   
 * **Infiltration attacks** - the authors try to mimic real world infiltration attacks in the form of malicious Dropbox download links for Windows devices, and malicious USB drives for Macintosh devices. They use these methods to get the user to download malicious software, that targets common vulnerable software such as Adobe Acrobat Reader. If the attack is successful, they payload dropped can conduct IP sweeps and port scanning of the internal Victim network via Nmap.
 
-The authors used the above described softwares for the different uses and employed the use of Python scripts in order to automate run the attacks in parallel using multiprocessing. 
+The authors used the above described softwares for the different uses and employed the use of Python scripts in order to automate the attacks in parallel using multiprocessing. 
 
 The different kinds of attacks are mixed, and across a 5 day period - Monday to Friday, from 9 a.m. to 5 p.m. these attacks were simulated on the described network configuration. The complete dataset consists of multiple PCAP files, separated according to the day the data was collected. The authors also provide the data extracted into csv format for easy consumption. 
 
@@ -193,7 +193,7 @@ For our experiments, we specifically chose the **Thursday afternoon** subset of 
 Victims
 ~~~~~~~
 
-In order to mimic benign user traffic on the Victim network, the authors used their proposed B-Profile system. This system is capable of profiling user network interactions and generate natural traffic based on learnt profile. In order to generate the data, the authors used a dataset that contained user network traffic of 25 individuals, containing differnt protocols such as SSH, HTTP, SMTP, HTTPS, FTP, etc. The B-Profile system learnt a comprehensive profile based on this normal user traffic, using statistical and machine laerning based methods. This was used to derive a B-Profile that will mimic normal users. Finally, and agent written in Java is used to generate the benign network traffic with similar characteristics. This generated data was used as the basis of all data labelled "Benign" in the final IDS dataset.
+In order to mimic benign user traffic on the Victim network, the authors used their proposed B-Profile system. This system is capable of profiling user network interactions and generate natural traffic based on learnt profile. In order to generate the data, the authors used a dataset that contained user network traffic of 25 individuals, containing differnt protocols such as SSH, HTTP, SMTP, HTTPS, FTP, etc. The B-Profile system learnt a comprehensive profile based on this normal user traffic, using statistical and machine laerning based methods. This was used to derive a B-Profile that will mimic normal users. Finally, an agent written in Java is used to generate the benign network traffic with similar characteristics. This generated data was used as the basis of all data labelled "Benign" in the final IDS dataset.
 
 .. Describe user profile
 
@@ -262,12 +262,11 @@ Comparison to other datasets
 
 Table 1 :ref:`my_table_reference` demonstrates the importance of the CICIDS2017 for the Ethical Hacking research community, as it directly compares it to other existing intrusion detection datasets, clearly revealing where previous datasets are lacking and how the present dataset fits more criteria that are important for studying network attacks.
 
-Caption: Table from Sharafaldin et al. (2017) illustration the identified Intrusion Detection datasets from previous studies compared on a taxonomy with 21 unique characteristics. CICIDS2017 contains all of them, whereas the other datasets do not appear to be as comprehensive according to the authors. The rows denote the relevant dataset and the columns refer to each specific criterion.
-
+*Table from Sharafaldin et al. (2017). This table outlines the identified Intrusion Detection datasets from previous studies compared on a taxonomy with 21 unique characteristics. CICIDS2017 contains nearly all characteristics, whereas the other datasets do not appear to be as comprehensive according to the authors. The rows denote the relevant dataset and the columns refer to each specific criterion.*
 
 .. _my_table_reference:
 
-.. table:: Comparing available IDS datasets based on the dataset evaluation framework [35].
+.. table:: Comparing available IDS datasets based on the dataset evaluation framework. Sharafaldin et al. (2017).
    
    +--------+---------+---------+---------+-----------+--------+----------+-------+-------+-------+-------+---------+--------+------+------+-------+-------+-------+-------+-------+-------+--------+
    |        | Network | Traffic | Label.  | Interact. | Captu. | Protocols|       |       |        |      | Attack  |        |      |      |       |       |       | Ano.  | Heter.| Feat. | Meta.  |
@@ -307,6 +306,7 @@ Caption: Table from Sharafaldin et al. (2017) illustration the identified Intrus
    | CICIDS | ✅      | ✅      | ✅      | ✅        | ✅     | ✅       | ✅    | ✅    | ✅    | ✅    | ✅      | ✅     | ✅   | ✅   | ✅    | ✅    | ✅    | ❌    | ✅    | ✅    | ✅     |
    +--------+---------+---------+---------+-----------+--------+----------+-------+-------+-------+-------+---------+--------+------+------+-------+-------+-------+-------+-------+-------+--------+
 
+   *Table from Sharafaldin et al. (2017). This table outlines the identified Intrusion Detection datasets from previous studies compared on a taxonomy with 21 unique characteristics. CICIDS2017 contains nearly all characteristics, whereas the other datasets do not appear to be as comprehensive according to the authors. The rows denote the relevant dataset and the columns refer to each specific criterion.*
 
 Overall, the presented dataset is the only one that exhibits most of the characteristics the authors deemed fit for building the ideal IDS dataset, compared to other publically available datasets. Specifically, this dataset is the only one that offers:
 
@@ -321,9 +321,11 @@ Overall, the presented dataset is the only one that exhibits most of the charact
 * **Metadata** - extensive explanation and detail of the dataset is provided.
 
 
-Reference
+References
 ---------------------------
 Iman Sharafaldin, Arash Habibi Lashkari, and Ali A. Ghorbani, **“Toward Generating a New Intrusion Detection Dataset and Intrusion Traffic Characterization”**, *4th International Conference on Information Systems Security and Privacy (ICISSP), Portugal*, January 2018
+
+Iman Sharafaldin, et al. **"BotViz: A memory forensic-based botnet detection and visualization approach."** *2017 International Carnahan Conference on Security Technology (ICCST)*. IEEE, 2017.
 
 
 .. Notes for Constantinos (to myself):

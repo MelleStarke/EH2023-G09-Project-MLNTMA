@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'Test'  # 'Network traffic monitoring techinques using Machine Learning'
+project = 'ML-based Network Traffic Analysis'  # 'Network traffic monitoring techinques using Machine Learning'
 copyright = '2024, University of Groningen'
 author = 'Constantinos Kyriakides, Melle Starke, Aditya Menon'
 
