@@ -6,7 +6,7 @@ Welcome. This is a collection of resources that can help one start with using Ma
 .. toctree::
    :maxdepth: 1
 
-   datasets/gen_dataset
+   datasets/dataset
    notebooks/analysis_ml
    notebooks/analysis_dl
 
