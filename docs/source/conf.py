@@ -2,8 +2,8 @@
 
 # -- Project information
 
-project = 'Network traffic monitoring techinques using Machine Learning'
-copyright = '2024, RUG'
+project = 'Test'  # 'Network traffic monitoring techinques using Machine Learning'
+copyright = '2024, University of Groningen'
 author = 'Constantinos Kyriakides, Melle Starke, Aditya Menon'
 
 release = '0.1'
@@ -31,10 +31,6 @@ templates_path = ['_templates']
 
 # -- Options for HTML output
 
-html_css_files = ["docs/theme/custom.css",
-                  "../theme/custom.css",
-                  "./docs/theme/custom.css",
-                  "./../theme/custom.css"]
 html_theme = 'sphinx_immaterial'  # 'sphinx_rtd_theme'
 html_theme_options = {
     "palette": { "scheme":  "slate",
