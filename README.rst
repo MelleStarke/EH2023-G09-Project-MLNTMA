@@ -1,9 +1,6 @@
-Template for the Read the Docs tutorial
-=======================================
+Network Traffic Analysis using Machine Learning
+===============================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
-
-Read the tutorial here:
+Repository for the Ethical Hacking project found here:
 
 https://rug-eh2023-mlntma.readthedocs.io/en/latest/
